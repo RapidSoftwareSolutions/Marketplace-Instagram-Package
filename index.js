@@ -21,7 +21,6 @@ app.get(`/api/${PACKAGE_NAME}/callback`, require('./api/auth.js').callback);
 
 fs.readdirSync('api/').forEach((file) => {
 	try {
-
 		var mime      = file.substring(file.lastIndexOf('.') + 1),
 			[method, 
 			filename] = file.split('_'),

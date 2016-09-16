@@ -1,5 +1,4 @@
 module.exports.do = function(req, res){
-    console.log('called');
     res.status(200).send({
         'package': 'Instagram',
         "tagline": "Instagram Package",
@@ -17,7 +16,17 @@ module.exports.do = function(req, res){
                 {
                     name: "clientSecret",
                     type: "String",
-                    info: "The client id obtained from Instagram.",
+                    info: "The client secret obtained from Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"getCurrentUser",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
                 }
             ],
         }]

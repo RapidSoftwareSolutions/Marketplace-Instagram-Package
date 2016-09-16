@@ -1,5 +1,5 @@
-const _ = require('../lib/functions');
-var api = require('instagram-node').instagram();
+const _   = require('../lib/functions');
+const api = require('instagram-node').instagram();
 
 module.exports.auth = (req, res) => {
     let { clientId, clientSecret, to="to" } = req.query;
@@ -34,11 +34,12 @@ module.exports.callback = (req, res) => {
             r.contextWrites['creditails'] = JSON.stringify(err);
             r.callback = 'error'; 
         } else {
-            console.log(result);
             r.contextWrites['to'] = result;
             r.callback = 'success';
         }
 
+        // redirect user to callback
+
         res.status(200).send(r);
-  });
+    });
 };

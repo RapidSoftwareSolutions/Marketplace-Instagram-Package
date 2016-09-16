@@ -7,7 +7,7 @@ module.exports.callback = (req, res) => {
     };
 
     if(!clientId || !clientSecret) {
-        _.echoBadEnd(r, res);
+        _.echoBadEnd(r, to, res);
         return;
     }
 };
