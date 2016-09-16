@@ -99,6 +99,21 @@ module.exports.do = function(req, res){
                     info: "Return media earlier than this maxId.",
                 },
             ],
+        },
+        {
+            "name":"getCurrentUsersLikedMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "maxLikeId",
+                    type: "String",
+                    info: "Return media liked before this id."
+                }
+            ],
         }]
     })
 };

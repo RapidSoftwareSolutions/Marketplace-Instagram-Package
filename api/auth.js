@@ -20,7 +20,7 @@ module.exports.auth = (req, res) => {
     });
 
     req.to = to;
-    res.redirect(api.get_authorization_url(REDIRECT_URI, { scope: ['likes'], state: 'a state' }));
+    res.redirect(api.get_authorization_url(REDIRECT_URI, { scope: ['likes', 'public_content'], state: '' }));
 }
 
 module.exports.callback = (req, res) => {
