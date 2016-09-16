@@ -19,6 +19,7 @@ app.all(`/api/${PACKAGE_NAME}`, require('./api/metadata.js').do);
 app.get(`/api/${PACKAGE_NAME}/getAccessToken`, require('./api/auth.js').auth);
 app.get(`/api/${PACKAGE_NAME}/callback`, require('./api/auth.js').callback);
 
+/* Create basic auto-routing */
 fs.readdirSync('api/').forEach((file) => {
     try {
         var mime      = file.substring(file.lastIndexOf('.') + 1),
