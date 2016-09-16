@@ -1,0 +1,28 @@
+{
+  "name": "marketplace-instagram-package",
+  "version": "0.0.1",
+  "engines": {
+    "node": "^6",
+    "npm": "3.8.3"
+  },
+  "description": "RapidAPI Instagram module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha --recursive",
+    "start": "node ."
+  },
+  "author": "Dima Shirokov",
+  "license": "ISC",
+  "dependencies": {
+    "instagram-node": "^0.5.8",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+     "chai": "^3.5.0",
+     "mocha": "^2.4.5",
+     "supertest": "^1.2.0",
+     "supertest-as-promised": "^3.1.0"
+  }
+}
