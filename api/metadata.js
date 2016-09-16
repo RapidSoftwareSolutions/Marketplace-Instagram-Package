@@ -29,6 +29,21 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Instagram.",
                 }
             ],
+        },
+        {
+            "name":"getUserInformation",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "userId",
+                    type: "String",
+                    info: "The user id on Instagram.",
+                }
+            ],
         }]
     })
 };
