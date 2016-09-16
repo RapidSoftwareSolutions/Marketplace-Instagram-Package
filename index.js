@@ -20,17 +20,17 @@ app.get(`/api/${PACKAGE_NAME}/getAccessToken`, require('./api/auth.js').auth);
 app.get(`/api/${PACKAGE_NAME}/callback`, require('./api/auth.js').callback);
 
 fs.readdirSync('api/').forEach((file) => {
-	try {
-		var mime      = file.substring(file.lastIndexOf('.') + 1),
-			[method, 
-			filename] = file.split('_'),
-			route     = filename.substring(0, filename.length - mime.length - 1);
+    try {
+        var mime      = file.substring(file.lastIndexOf('.') + 1),
+	    [method, 
+	    filename] = file.split('_'),
+            route     = filename.substring(0, filename.length - mime.length - 1);
 
-		if(!/post|get|put|delete/.test(method) || mime !== 'js') return;
+	if(!/post|get|put|delete/.test(method) || mime !== 'js') return;
 		
-		app[method](`/api/${PACKAGE_NAME}/${route}`, require(`./api/${file}`));
+	app[method](`/api/${PACKAGE_NAME}/${route}`, require(`./api/${file}`));
 
-	} catch(e) { return; }
+    } catch(e) { return; }
 });
 
 /** START LISTENING **/
