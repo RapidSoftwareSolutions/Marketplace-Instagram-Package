@@ -114,6 +114,26 @@ module.exports.do = function(req, res){
                     info: "Return media liked before this id."
                 }
             ],
+        },
+        {
+            "name":"searchUser",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "query",
+                    type: "String",
+                    info: "A query string."
+                },
+                {
+                    name: "count",
+                    type: "String",
+                    info: "Number of users to return."
+                }
+            ],
         }]
     })
 };
