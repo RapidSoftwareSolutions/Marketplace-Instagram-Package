@@ -54,6 +54,31 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Instagram.",
                 },
                 {
+                    name: "count",
+                    type: "Number",
+                    info: "Count of media to return.",
+                },
+                {
+                    name: "minId",
+                    type: "String",
+                    info: "Return media later than this minId.",
+                },
+                {
+                    name: "maxId",
+                    type: "String",
+                    info: "Return media earlier than this maxId.",
+                },
+            ],
+        },
+        {
+            "name":"getUsersRecentMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
                     name: "userId",
                     type: "String",
                     info: "The user id on Instagram.",
