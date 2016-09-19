@@ -25,8 +25,6 @@ module.exports = (req, res) => {
     	if(!err && response.statusCode == 200) {
     		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success';
-
-            console.log(body);
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);
             r.callback = 'error';

@@ -637,3 +637,30 @@ Get a list of users who have liked this media.
 	}
 }
 ```
+
+## Instagram.removeLikeFromMedia
+Get a list of users who have liked this media.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `media_id`*       |string  | The media id on Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"media_id": "XXXXXXX_XXXXX",
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+		}
+	}
+}
+```

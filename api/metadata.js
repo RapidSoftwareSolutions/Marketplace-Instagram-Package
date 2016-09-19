@@ -364,6 +364,21 @@ module.exports.do = function(req, res){
                     info: "The media id on Instagram.",
                 },
             ]
+        },
+        {
+            "name":"removeLikeFromMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "mediaId",
+                    type: "String",
+                    info: "The media id on Instagram.",
+                },
+            ]
         }]
     })
 };
