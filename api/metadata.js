@@ -334,6 +334,36 @@ module.exports.do = function(req, res){
                     info: "The comment id on Instagram.",
                 }
             ]
+        },
+        {
+            "name":"getLikesForMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "mediaId",
+                    type: "String",
+                    info: "The media id on Instagram.",
+                },
+            ]
+        },
+        {
+            "name":"addLikeToMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "mediaId",
+                    type: "String",
+                    info: "The media id on Instagram.",
+                },
+            ]
         }]
     })
 };

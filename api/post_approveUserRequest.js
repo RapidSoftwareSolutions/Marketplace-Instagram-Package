@@ -1,4 +1,4 @@
-const       _ = require('../lib/functions');
+, access_token: accessTokenconst       _ = require('../lib/functions');
 const request = require('request');
 
 module.exports = (req, res) => {
@@ -17,7 +17,7 @@ module.exports = (req, res) => {
 
     let uri = `https://api.instagram.com/v1/users/${userId}/relationship?access_token=${accessToken}`;
 
-    return request.post({url: uri, form: {action: 'approve'}}, (err, response, body) => {
+    return request.post({url: uri, form: {action: 'approve', access_token: accessToken}}, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
     		r.contextWrites[to] = body;
             r.callback = 'success'; 

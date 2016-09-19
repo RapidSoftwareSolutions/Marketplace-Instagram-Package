@@ -1,9 +1,9 @@
 const       _ = require('../lib/functions');
-const request = require('request');
+const request = require('../request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, userId, to="to" } = req.body.args;
+    let { accessToken, mediaId, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
@@ -15,14 +15,14 @@ module.exports = (req, res) => {
         return;
     }
 
-    let uri = `https://api.instagram.com/v1/users/${userId}/relationship?access_token=${accessToken}`;
-
-    return request.post({url: uri, form: {action: 'ignore', access_token: accessToken}}, (err, response, body) => {
+    let uri = `https://api.instagram.com/v1/media/${mediaId}/likes?access_token=${accessToken}`;
+    
+    return request(uri, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = body;
+    		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = err || body;
+            r.contextWrites[to] = err || JSON.stringify(body);
             r.callback = 'error';
         }
 

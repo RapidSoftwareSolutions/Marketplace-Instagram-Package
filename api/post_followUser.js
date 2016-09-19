@@ -17,7 +17,7 @@ module.exports = (req, res) => {
 
     let uri = `https://api.instagram.com/v1/users/${userId}/relationship?access_token=${accessToken}`;
 
-    return request.post({url: uri, form: {action: 'follow'}}, (err, response, body) => {
+    return request.post({url: uri, form: {action: 'follow', access_token: accessToken}}, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
     		r.contextWrites[to] = body;
             r.callback = 'success'; 

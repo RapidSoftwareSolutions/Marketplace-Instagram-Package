@@ -567,7 +567,63 @@ Remove a comment either on the authenticated user's media object or authored by 
 ```json
 {
 	"accessToken": "XXXXXXX",
-	"text": "This is my comment"
+	"media_id": "XXXXXXX_XXXXX",
+	comment_id: "XXXXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+		}
+	}
+}
+```
+
+## Instagram.getLikesForMedia
+Get a list of users who have liked this media.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `media_id`*       |string  | The media id on Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"media_id": "XXXXXXX_XXXXX",
+}
+```
+
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":[{\"username\":\"jack\",\"first_name\":\"Jack\",\"last_name\":\"Dorsey\",\"type\":\"user\",\"id\":\"66\"},{\"username\":\"sammyjack\",\"first_name\":\"Sammy\",\"last_name\":\"Jack\",\"type\":\"user\",\"id\":\"29648\"}]}"
+		}
+	}
+}
+```
+
+## Instagram.addLikeToMedia
+Get a list of users who have liked this media.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `media_id`*       |string  | The media id on Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"media_id": "XXXXXXX_XXXXX",
 }
 ```
 #### Response example
