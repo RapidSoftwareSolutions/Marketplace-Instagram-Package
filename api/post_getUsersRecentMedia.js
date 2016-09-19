@@ -1,4 +1,5 @@
-const request = require('request');
+const       _ = require('../lib/functions');
+const request = require('../request');
 
 module.exports = (req, res) => {
 
@@ -22,11 +23,10 @@ module.exports = (req, res) => {
 
     return request(uri, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
-            console.log(JSON.stringify(body))
     		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = err;
+            r.contextWrites[to] = err || JSON.stringify(body);
             r.callback = 'error';
         }
 

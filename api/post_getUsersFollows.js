@@ -1,5 +1,5 @@
 const       _ = require('../lib/functions');
-const request = require('request');
+const request = require('../request');
 
 module.exports = (req, res) => {
 
@@ -15,12 +15,14 @@ module.exports = (req, res) => {
         return;
     }
 
-    return request(`https://api.instagram.com/v1/users/${userId}/?access_token=${accessToken}`, (err, response, body) => {
+    let uri = `https://api.instagram.com/v1/users/${userId}/follows/?access_token=${accessToken}`;
+
+    return request(uri, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = body;
+    		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = err || body;
+            r.contextWrites[to] = err || JSON.stringify(body);
             r.callback = 'error';
         }
 

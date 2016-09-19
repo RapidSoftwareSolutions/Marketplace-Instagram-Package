@@ -3,19 +3,21 @@ const request = require('request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, userId="self", to="to" } = req.body.args;
+    let { accessToken, mediaId, text, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
         contextWrites   : {}
     };
 
-    if(!accessToken) {
+    if(!accessToken || !mediaId || !text) {
         _.echoBadEnd(r, to, res);
         return;
     }
 
-    return request(`https://api.instagram.com/v1/users/${userId}/?access_token=${accessToken}`, (err, response, body) => {
+    let uri = `https://api.instagram.com/v1/media/${mediaId}/comments`;
+
+    return request.post({url: uri, form: {text: text, access_token: accessToken}}, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
     		r.contextWrites[to] = body;
             r.callback = 'success'; 

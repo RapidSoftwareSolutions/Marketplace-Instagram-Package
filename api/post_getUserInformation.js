@@ -1,3 +1,4 @@
+const       _ = require('../lib/functions');
 const request = require('request');
 
 module.exports = (req, res) => {
@@ -16,10 +17,10 @@ module.exports = (req, res) => {
 
     return request(`https://api.instagram.com/v1/users/${userId}/?access_token=${accessToken}`, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
+    		r.contextWrites[to] = body;
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = err;
+            r.contextWrites[to] = err || body;
             r.callback = 'error';
         }
 

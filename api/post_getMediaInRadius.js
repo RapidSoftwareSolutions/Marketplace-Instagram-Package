@@ -3,28 +3,26 @@ const request = require('../request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, count, query, to="to" } = req.body.args;
+    let { accessToken, lat, lng, distance, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
         contextWrites   : {}
     };
 
-    if(!accessToken) {
+    if(!accessToken || !lng || !lat) {
         _.echoBadEnd(r, to, res);
         return;
     }
 
-    let uri = `https://api.instagram.com/v1/users/search?q=${query}&access_token=${accessToken}`;
-    
-    if(count) uri += `&count=${count}`;
+    let uri = `https://api.instagram.com/v1/media/search?lat=${lat}&lng=${lng}&distance=${distance || 1000}&access_token=${accessToken}`;
 
     return request(uri, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = body;
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = err || JSON.stringify(body);
+            r.contextWrites[to] = err || body;
             r.callback = 'error';
         }
 

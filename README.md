@@ -175,3 +175,409 @@ Get the list of recent media liked by the owner of the access_token.
 	}
 }
 ```
+
+## Instagram.getUsersFollows
+Get the list of users this user follows.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":[{\"username\":\"kevin\",\"profile_picture\":\"http://images.ak.instagram.com/profiles/profile_3_75sq_1325536697.jpg\",\"full_name\":\"Kevin Systrom\",\"id\":\"3\"},{\"username\":\"instagram\",\"profile_picture\":\"http://images.ak.instagram.com/profiles/profile_25025320_75sq_1340929272.jpg\",\"full_name\":\"Instagram\",\"id\":\"25025320\"}]}"
+		}
+	}
+}
+```
+
+## Instagram.getUsersFollowers
+Get the list of users this user is followed by.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":[{\"username\":\"kevin\",\"profile_picture\":\"http://images.ak.instagram.com/profiles/profile_3_75sq_1325536697.jpg\",\"full_name\":\"Kevin Systrom\",\"id\":\"3\"},{\"username\":\"instagram\",\"profile_picture\":\"http://images.ak.instagram.com/profiles/profile_25025320_75sq_1340929272.jpg\",\"full_name\":\"Instagram\",\"id\":\"25025320\"}]}"
+		}
+	}
+}
+```
+
+## Instagram.getUsersRequestedBy
+List the users who have requested this user's permission to follow.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":[{\"username\":\"mikeyk\",\"profile_picture\":\"http://distillery.s3.amazonaws.com/profiles/profile_4_75sq_1292324747_debug.jpg\",\"id\":\"4\"}]}"
+		}
+	}
+}
+```
+## Instagram.getRelationshipToUser
+Get information about a relationship to another user. Relationships are expressed using the following terms in the response:
+* `outgoing_status`: Your relationship to the user. Can be 'follows', 'requested', 'none'.
+* `incoming_status`: A user's relationship to you. Can be 'followed_by', 'requested_by', 'blocked_by_you', 'none'.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `userId`*         |string  | The user id on Instagram. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"userId": "XXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\": \"outgoing_status\": \"none\", \"incoming_status\": \"requested_by\"}"
+		}
+	}
+}
+```
+
+## Instagram.followUser
+Follow a user.
+* `outgoing_status`: Your relationship to the user. Can be 'follows', 'requested', 'none'.
+* `incoming_status`: A user's relationship to you. Can be 'followed_by', 'requested_by', 'blocked_by_you', 'none'.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `userId`*         |string  | The user id on Instagram. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"userId": "XXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\": \"outgoing_status\": \"requested\"}"
+		}
+	}
+}
+```
+
+## Instagram.unfollowUser
+Unfollow a user.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `userId`*         |string  | The user id on Instagram. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"userId": "XXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\": \"outgoing_status\": \"requested\"}"
+		}
+	}
+}
+```
+
+## Instagram.approveUserRequest
+Approve a follow request by a user.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `userId`*         |string  | The user id on Instagram. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"userId": "XXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\": \"outgoing_status\": \"requested\"}"
+		}
+	}
+}
+```
+
+## Instagram.approveUserRequest
+Approve a follow request by a user.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `userId`*         |string  | The user id on Instagram. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"userId": "XXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\": \"outgoing_status\": \"requested\"}"
+		}
+	}
+}
+```
+
+## Instagram.ignoreUserRequest
+Ignore a follow request by a user.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `userId`*         |string  | The user id on Instagram. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"userId": "XXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\": \"outgoing_status\": \"requested\"}"
+		}
+	}
+}
+```
+
+## Instagram.getMediaInformation
+Get information about a media object. Use the type field to differentiate between image and video media in the response. You will also receive the user_has_liked field which tells you whether the owner of the access_token has liked this media.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `mediaId`*        |string  | The media id on Instagram. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"mediaId": "XXXXXX"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":{\"type\":\"image\",\"users_in_photo\":[{\"user\":{\"username\":\"kevin\",\"full_name\":\"Kevin S\",\"id\":\"3\",\"profile_picture\":\"...\"},\"position\":{\"x\":0.315,\"y\":0.9111}}],\"filter\":\"Walden\",\"tags\":[],\"comments\":{\"count\":2},\"caption\":null,\"likes\":{\"count\":1},\"link\":\"http://instagr.am/p/D/\",\"user\":{\"username\":\"kevin\",\"full_name\":\"Kevin S\",\"profile_picture\":\"...\",\"id\":\"3\"},\"created_time\":\"1279340983\",\"images\":{\"low_resolution\":{\"url\":\"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_6.jpg\",\"width\":306,\"height\":306},\"thumbnail\":{\"url\":\"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_5.jpg\",\"width\":150,\"height\":150},\"standard_resolution\":{\"url\":\"http://distillery.s3.amazonaws.com/media/2010/07/16/4de37e03aa4b4372843a7eb33fa41cad_7.jpg\",\"width\":612,\"height\":612}},\"id\":\"3\",\"location\":null}}"
+		}
+	}
+}
+```
+#### Response VIDEO example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":{\"type\":\"video\",\"videos\":{\"low_resolution\":{\"url\":\"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_102.mp4\",\"width\":480,\"height\":480},\"standard_resolution\":{\"url\":\"http://distilleryvesper9-13.ak.instagram.com/090d06dad9cd11e2aa0912313817975d_101.mp4\",\"width\":640,\"height\":640},\"users_in_photo\":null,\"filter\":\"Vesper\",\"tags\":[],\"comments\":{\"count\":2},\"caption\":null,\"likes\":{\"count\":1},\"link\":\"http://instagr.am/p/D/\",\"user\":{\"username\":\"kevin\",\"full_name\":\"Kevin S\",\"profile_picture\":\"...\",\"id\":\"3\"},\"created_time\":\"1279340983\",\"images\":{\"low_resolution\":{\"url\":\"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_6.jpg\",\"width\":306,\"height\":306},\"thumbnail\":{\"url\":\"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_5.jpg\",\"width\":150,\"height\":150},\"standard_resolution\":{\"url\":\"http://distilleryimage2.ak.instagram.com/11f75f1cd9cc11e2a0fd22000aa8039a_7.jpg\",\"width\":612,\"height\":612}},\"id\":\"3\",\"location\":null}}}"
+		}
+	}
+}
+```
+
+## Instagram.getMediaInRadius
+Search for recent media in a given area.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `lat`             |string  | Latitude of the center search coordinate. If used, lng is required. |
+| `lng`             |string  | Longitude of the center search coordinate. If used, lat is required. |
+| `distance`        |integer | Default is 1km (`distance`=1000), max distance is 5km. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"lat": "48.858844",
+	"lng": "2.294351"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":[{\"distance\":41.7413691946297,\"type\":\"image\",\"users_in_photo\":[],\"filter\":\"Earlybird\",\"tags\":[],\"comments\":{\"count\":2},\"caption\":null,\"likes\":{\"count\":1},\"link\":\"http://instagr.am/p/BQEEq/\",\"user\":{\"username\":\"mahaface\",\"profile_picture\":\"http://distillery.s3.amazonaws.com/profiles/profile_1329896_75sq_1294131373.jpg\",\"id\":\"1329896\"},\"created_time\":\"1296251679\",\"images\":{\"low_resolution\":{\"url\":\"http://distillery.s3.amazonaws.com/media/2011/01/28/0cc4f24f25654b1c8d655835c58b850a_6.jpg\",\"width\":306,\"height\":306},\"thumbnail\":{\"url\":\"http://distillery.s3.amazonaws.com/media/2011/01/28/0cc4f24f25654b1c8d655835c58b850a_5.jpg\",\"width\":150,\"height\":150},\"standard_resolution\":{\"url\":\"http://distillery.s3.amazonaws.com/media/2011/01/28/0cc4f24f25654b1c8d655835c58b850a_7.jpg\",\"width\":612,\"height\":612}},\"id\":\"20988202\",\"location\":null}]}"
+		}
+	}
+}
+```
+
+## Instagram.getCommentsForMedia
+Get a list of recent comments on a media object.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `mediaId`*        |string  | The media id on Instagram. |
+
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"lat": "48.858844",
+	"lng": "2.294351"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":[{\"created_time\":\"1280780324\",\"text\":\"Really amazing photo!\",\"from\":{\"username\":\"snoopdogg\",\"profile_picture\":\"http://images.instagram.com/profiles/profile_16_75sq_1305612434.jpg\",\"id\":\"1574083\",\"full_name\":\"Snoop Dogg\"},\"id\":\"420\"}]}"
+		}
+	}
+}
+```
+
+## Instagram.addCommentToMedia
+Create a comment on a media object.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `mediaId`*        |string  | The media id on Instagram. |
+| `text`*           |string  | Text to post as a comment on the media object as specified in `mediaId`. |
+
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"text": "This is my comment"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+		}
+	}
+}
+```
+
+## Instagram.removeCommentFromMedia
+Remove a comment either on the authenticated user's media object or authored by the authenticated user.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `media_id`*       |string  | The media id on Instagram. |
+| `comment_id`*     |string  | The comment id on Instagram. |
+
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"text": "This is my comment"
+}
+```
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+		}
+	}
+}
+```

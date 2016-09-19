@@ -134,6 +134,206 @@ module.exports.do = function(req, res){
                     info: "Number of users to return."
                 }
             ],
+        },
+        {
+            "name":"getUsersFollows",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"getUsersFollowers",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"getUsersRequestedBy",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"getRelationshipToUser",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "userId",
+                    type: "String",
+                    info: "The user id on Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"followUser",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "userId",
+                    type: "String",
+                    info: "The user id on Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"unfollowUser",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "userId",
+                    type: "String",
+                    info: "The user id on Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"approveUserRequest",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "userId",
+                    type: "String",
+                    info: "The user id on Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"ignoreUserRequest",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "userId",
+                    type: "String",
+                    info: "The user id on Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"getMediaInformation",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "mediaId",
+                    type: "String",
+                    info: "The media id on Instagram.",
+                }
+            ],
+        },
+        {
+            "name":"getMediaInRadius",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "lat",
+                    type: "String",
+                    info: "Latitude of the center search coordinate. If used, lng is required.",
+                },
+                {
+                    name: "lng",
+                    type: "String",
+                    info: "Longitude of the center search coordinate. If used, lat is required.",
+                },
+                {
+                    name: "distance",
+                    type: "String",
+                    info: "Default is 1km (`distance`=1000), max distance is 5km..",
+                }
+            ],
+        },
+        {
+            "name":"getCommentsForMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "mediaId",
+                    type: "String",
+                    info: "The media id on Instagram.",
+                }
+            ]
+        },
+        {
+            "name":"addCommentToMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "mediaId",
+                    type: "String",
+                    info: "The media id on Instagram.",
+                },
+                {
+                    name: "text",
+                    type: "String",
+                    info: "Text to post as a comment on the media object as specified in media-id.",
+                }
+            ]
+        },
+        {
+            "name":"removeCommentFromMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "The access_token obtained from Instagram.",
+                },
+                {
+                    name: "mediaId",
+                    type: "String",
+                    info: "The media id on Instagram.",
+                },
+                {
+                    name: "commentId",
+                    type: "String",
+                    info: "The comment id on Instagram.",
+                }
+            ]
         }]
     })
 };

@@ -3,30 +3,25 @@ const request = require('../request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, userId="self", count, maxId, minId, to="to" } = req.body.args;
+    let { accessToken, mediaId, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
         contextWrites   : {}
     };
 
-    if(!accessToken || !userId) {
+    if(!accessToken || !mediaId) {
         _.echoBadEnd(r, to, res);
         return;
     }
 
-    let uri = `https://api.instagram.com/v1/users/${userId}/media/recent/?access_token=${accessToken}`;
-    
-    if(count) uri += `&count=${count}`;
-    if(maxId) uri += `&max_id=${maxId}`;
-    if(minId) uri += `&min_id=${minId}`;
+    let uri = `https://api.instagram.com/v1/media/${mediaId}/comments?access_token=${accessToken}`;
 
     return request(uri, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
-            r.callback = 'success';
-
+        if(!err && response.statusCode == 200) {
             console.log(body);
+            r.contextWrites[to] = JSON.stringify(body);
+            r.callback = 'success'; 
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);
             r.callback = 'error';

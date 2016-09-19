@@ -1,4 +1,5 @@
-const request = require('request');
+const       _ = require('../lib/functions');
+const request = require('../request');
 
 module.exports = (req, res) => {
     let { accessToken, userId="self", maxLikeId, to="to" } = req.body.args;
@@ -23,7 +24,7 @@ module.exports = (req, res) => {
     		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
-            r.contextWrites[to] = err;
+            r.contextWrites[to] = err || JSON.stringify(body);
             r.callback = 'error';
         }
 
