@@ -2,7 +2,7 @@
 # Instagram Package
 This Package can be used to build non-automated, authentic, high-quality apps and services.
 
-## How to get ``:
+## How to get credentials:
 1. Go to [Instagram developer page](https://www.instagram.com/developer/)
 2. Click on <kbd>Register Your Application</kbd>
 3. Click on <kbd>Register a New Client</kbd>
