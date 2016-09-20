@@ -91,7 +91,7 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The access_token obtained from Instagram.",
                 },
-                {
+                /*{
                     name: "count",
                     type: "Number",
                     info: "Count of media to return.",
@@ -105,7 +105,7 @@ module.exports.do = function(req, res){
                     name: "maxId",
                     type: "String",
                     info: "Return media earlier than this maxId.",
-                },
+                },*/
             ],
             'callbacks':[
                     {
@@ -131,7 +131,7 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The user id on Instagram.",
                 },
-                {
+                /*{
                     name: "count",
                     type: "Number",
                     info: "Count of media to return.",
@@ -145,7 +145,7 @@ module.exports.do = function(req, res){
                     name: "maxId",
                     type: "String",
                     info: "Return media earlier than this maxId.",
-                },
+                },*/
             ],
             'callbacks':[
                     {
@@ -166,11 +166,11 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The access_token obtained from Instagram.",
                 },
-                {
+                /*{
                     name: "maxLikeId",
                     type: "String",
                     info: "Return media liked before this id."
-                }
+                }*/
             ],
             'callbacks':[
                     {
@@ -196,11 +196,11 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "A query string."
                 },
-                {
+                /*{
                     name: "count",
                     type: "String",
                     info: "Number of users to return."
-                }
+                }*/
             ],
             'callbacks':[
                     {

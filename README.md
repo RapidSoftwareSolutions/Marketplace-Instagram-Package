@@ -546,7 +546,7 @@ Create a comment on a media object.
 	"callback": "success",
 	"contextWrites": {
 		"#": {	
-			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+			"to": "{\"meta\": {\"code\": 200\"}, \"data\": null}"
 		}
 	}
 }
@@ -568,7 +568,7 @@ Remove a comment either on the authenticated user's media object or authored by 
 {
 	"accessToken": "XXXXXXX",
 	"mediaId": "XXXXXXX_XXXXX",
-	comment_id: "XXXXXXXX"
+	"comment_id": "XXXXXXXX"
 }
 ```
 #### Response example
@@ -577,7 +577,7 @@ Remove a comment either on the authenticated user's media object or authored by 
 	"callback": "success",
 	"contextWrites": {
 		"#": {	
-			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+			"to": "{\"meta\": {\"code\": 200\"}, \"data\": null}"
 		}
 	}
 }
@@ -632,7 +632,7 @@ Create a comment on a media object.
 	"callback": "success",
 	"contextWrites": {
 		"#": {	
-			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+			"to": "{\"meta\": {\"code\": 200\"}, \"data\": null}"
 		}
 	}
 }
@@ -660,7 +660,7 @@ Remove a comment on a media object.
 	"callback": "success",
 	"contextWrites": {
 		"#": {	
-			"to": "{\"meta\": {\"code\": 200"}, \"data\": null}"
+			"to": "{\"meta\": {\"code\": 200\"}, \"data\": null}"
 		}
 	}
 }

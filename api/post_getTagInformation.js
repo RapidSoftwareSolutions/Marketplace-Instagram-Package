@@ -20,6 +20,7 @@ module.exports = (req, res) => {
     		r.contextWrites[to] = body;
             r.callback = 'success'; 
         } else {
+            console.log(err, body)
             r.contextWrites[to] = err || body;
             r.callback = 'error';
         }

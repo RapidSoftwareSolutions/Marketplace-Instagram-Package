@@ -1,4 +1,4 @@
-, access_token: accessTokenconst       _ = require('../lib/functions');
+const       _ = require('../lib/functions');
 const request = require('request');
 
 module.exports = (req, res) => {

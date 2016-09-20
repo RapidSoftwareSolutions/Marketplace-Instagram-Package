@@ -11,6 +11,7 @@ module.exports = (req, res) => {
     };
 
     if(!accessToken || !lng || !lat) {
+        console.log('here');
         _.echoBadEnd(r, to, res);
         return;
     }
@@ -22,6 +23,7 @@ module.exports = (req, res) => {
             r.contextWrites[to] = body;
             r.callback = 'success'; 
         } else {
+            console.log(err, body)
             r.contextWrites[to] = err || body;
             r.callback = 'error';
         }

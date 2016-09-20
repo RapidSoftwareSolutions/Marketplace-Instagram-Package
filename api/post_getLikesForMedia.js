@@ -10,7 +10,7 @@ module.exports = (req, res) => {
         contextWrites   : {}
     };
 
-    if(!accessToken || !userId) {
+    if(!accessToken || !mediaId) {
         _.echoBadEnd(r, to, res);
         return;
     }
