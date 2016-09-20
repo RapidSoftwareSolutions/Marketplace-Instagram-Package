@@ -19,7 +19,6 @@ module.exports = (req, res) => {
     //if(maxLikeId) uri += `&max_like_id=${maxLikeId}`;
 
     return request(uri, (err, response, body) => {
-        console.log(body);
     	if(!err && response.statusCode == 200) {
     		r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 

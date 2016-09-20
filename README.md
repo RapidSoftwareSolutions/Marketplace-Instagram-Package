@@ -1,11 +1,23 @@
+
 # Instagram Package
 This Package can be used to build non-automated, authentic, high-quality apps and services.
 
-## How to get `apiKey`:
-// todo
+## How to get ``:
+1. Go to [Instagram developer page](https://www.instagram.com/developer/)
+2. Click on <kbd>Register Your Application</kbd>
+3. Click on <kbd>Register a New Client</kbd>
+4. Fill the form and click on <kbd>Register</kbd>
+5. Go to [Clients manager](https://www.instagram.com/developer/clients/manage/)
+6. Click on <kbd>Manage</kbd> in youe application block
+7. Copy and save your credentials.
+8. Use `Client ID` and `Client Secret` for call `Instagram.getAccessToken` method;
 
 ## Instagram.getAccessToken
-Description will be here
+
+| Field            | Type   | Description  |
+| -------------    |--------| -------------|
+| `cliendId`       |string  | The Cliend Id obtained from Instagram. |
+| `clientSecret`   |string  | The Cliend Secret obtained from Instagram. |
 
 ## Instagram.getCurrentUser
 Get information about the owner of the `accessToken`.

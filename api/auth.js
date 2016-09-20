@@ -42,7 +42,7 @@ module.exports.callback = (req, res) => {
             r.contextWrites['creditails'] = JSON.stringify(err);
             r.callback = 'error'; 
         } else {
-            r.contextWrites['to'] = result;
+            r.contextWrites['to'] = result.access_token;
             r.callback = 'success';
         }
 

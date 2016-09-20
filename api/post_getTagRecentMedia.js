@@ -16,7 +16,6 @@ module.exports = (req, res) => {
     }
 
     let uri = `https://api.instagram.com/v1/tags/${tagName}/media/recent?access_token=${accessToken}`;
-    console.log(uri);
     
     return request(uri, (err, response, body) => {
     	if(!err && response.statusCode == 200) {
