@@ -5,6 +5,9 @@ module.exports.do = function(req, res){
         "description": "The Instagram Package can be used to build non-automated, authentic, high-quality apps and services.",
         'image': 'http://3835642c2693476aa717-d4b78efce91b9730bcca725cf9bb0b37.r51.cf1.rackcdn.com/Instagram_App_Large_May2016_200.png',
         'repo': 'https://github.com/RapidSoftwareSolutions/marketplace-instagram-package',
+        /*'accounts': {
+            'domain': 'google.com'
+        },*/
         'blocks': [{
             "name":"getAccessToken",
             "args":[
@@ -18,7 +21,17 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The client secret obtained from Instagram.",
                 }
-            ],
+            ], 
+            'callbacks':[
+                {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getCurrentUser",
@@ -29,6 +42,16 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Instagram.",
                 }
             ],
+    	    'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getUserInformation",
@@ -44,6 +67,16 @@ module.exports.do = function(req, res){
                     info: "The user id on Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getCurrentUsersRecentMedia",
@@ -69,6 +102,16 @@ module.exports.do = function(req, res){
                     info: "Return media earlier than this maxId.",
                 },
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getUsersRecentMedia",
@@ -99,6 +142,16 @@ module.exports.do = function(req, res){
                     info: "Return media earlier than this maxId.",
                 },
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getCurrentUsersLikedMedia",
@@ -114,6 +167,16 @@ module.exports.do = function(req, res){
                     info: "Return media liked before this id."
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"searchUser",
@@ -134,6 +197,16 @@ module.exports.do = function(req, res){
                     info: "Number of users to return."
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getUsersFollows",
@@ -144,6 +217,16 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getUsersFollowers",
@@ -154,6 +237,16 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getUsersRequestedBy",
@@ -164,6 +257,16 @@ module.exports.do = function(req, res){
                     info: "The access_token obtained from Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getRelationshipToUser",
@@ -179,6 +282,16 @@ module.exports.do = function(req, res){
                     info: "The user id on Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"followUser",
@@ -194,6 +307,16 @@ module.exports.do = function(req, res){
                     info: "The user id on Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"unfollowUser",
@@ -209,6 +332,16 @@ module.exports.do = function(req, res){
                     info: "The user id on Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"approveUserRequest",
@@ -224,6 +357,16 @@ module.exports.do = function(req, res){
                     info: "The user id on Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"ignoreUserRequest",
@@ -239,6 +382,16 @@ module.exports.do = function(req, res){
                     info: "The user id on Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getMediaInformation",
@@ -254,6 +407,16 @@ module.exports.do = function(req, res){
                     info: "The media id on Instagram.",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getMediaInRadius",
@@ -279,6 +442,16 @@ module.exports.do = function(req, res){
                     info: "Default is 1km (`distance`=1000), max distance is 5km..",
                 }
             ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
         },
         {
             "name":"getCommentsForMedia",
@@ -292,6 +465,16 @@ module.exports.do = function(req, res){
                     name: "mediaId",
                     type: "String",
                     info: "The media id on Instagram.",
+                }
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
                 }
             ]
         },
@@ -313,6 +496,16 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "Text to post as a comment on the media object as specified in media-id.",
                 }
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
             ]
         },
         {
@@ -333,6 +526,16 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The comment id on Instagram.",
                 }
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
             ]
         },
         {
@@ -348,6 +551,16 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The media id on Instagram.",
                 },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
             ]
         },
         {
@@ -363,6 +576,16 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The media id on Instagram.",
                 },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
             ]
         },
         {
@@ -378,6 +601,91 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "The media id on Instagram.",
                 },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },
+        {
+            "name":"getTagInformation",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "Get information about a tag object.",
+                },
+                {
+                    name: "tagName",
+                    type: "String",
+                    info: "The tag name on Instagram.",
+                },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },
+        {
+            "name":"getTagRecentMedia",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "Get information about a tag object.",
+                },
+                {
+                    name: "tagName",
+                    type: "String",
+                    info: "The tag name on Instagram.",
+                },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },
+        {
+            "name":"searchTags",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "Get information about a tag object.",
+                },
+                {
+                    name: "query",
+                    type: "String",
+                    info: "A valid tag name without a leading #. (eg. snowy, nofilter).",
+                },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
             ]
         }]
     })

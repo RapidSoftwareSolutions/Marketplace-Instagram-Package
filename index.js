@@ -23,7 +23,7 @@ fs.readdirSync('api/').forEach((file) => {
     try {
         var type      = file.substring(file.lastIndexOf('.') + 1),
 	    [method, 
-	    filename]     = file.split('_'),
+	    filename] = file.split('_'),
             route     = filename.substring(0, filename.length - type.length - 1);
 
 	   if(!/post|get|put|delete/.test(method) || !type == 'js') return;
