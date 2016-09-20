@@ -467,8 +467,8 @@ Search for recent media in a given area.
 | Field             | Type   | Description  |
 | -------------     |--------| -------------|
 | `accessToken`*    |string  | The accessToken obtained from Instagram. |
-| `lat`             |string  | Latitude of the center search coordinate. If used, lng is required. |
-| `lng`             |string  | Longitude of the center search coordinate. If used, lat is required. |
+| `lat`*            |string  | Latitude of the center search coordinate. If used, lng is required. |
+| `lng`*            |string  | Longitude of the center search coordinate. If used, lat is required. |
 | `distance`        |integer | Default is 1km (`distance`=1000), max distance is 5km. |
 
 
@@ -744,6 +744,95 @@ Get information about a tag object.
 	"contextWrites": {
 		"#": {	
 			"to": "{\"data\": [{\"media_count\": 472}, \"name\":\"test\"}]"
+		}
+	}
+}
+```
+
+## Instagram.getLocationInformation
+Get information about a location.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `locationId`*     |integer | The location id on Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"locationId": 1,
+}
+```
+
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {	
+			"to": "{\"data\":{\"id\":\"1\",\"name\":\"Dogpatch Labs\",\"latitude\":37.782,\"longitude\":-122.387}}"
+		}
+	}
+}
+```
+
+## Instagram.getRecentMediaFromLocation
+Get a list of recent media objects from a given location.
+
+| Field             | Type   | Description  |
+| -------------     |--------| -------------|
+| `accessToken`*    |string  | The accessToken obtained from Instagram. |
+| `locationId`*     |integer | The location id on Instagram. |
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"locationId": 1,
+}
+```
+
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {
+			"to" :"\"data\": [{\"attribution\": null, \"tags\": [], \"type\": \"image\", \"location\": {\"latitude\": 50.445858, \"name\": \"Avalon\", \"longitude\": 30.5101719, \"id\": 1013986062}, \"comments\": {\"count\": 0}, \"filter\": \"Lark\", \"created_time\": \"1473525145\", \"link\": \"https://www.instagram.com/p/BKLqaSnBHnm/\", \"likes\": {\"count\": 7}, \"images\": {\"low_resolution\": {\"url\": \"https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/14280460_1748649632069678_43848281_n.jpg?ig_cache_key=MTMzNjM0ODIzOTA4NzMwMzE0Mg%3D%3D.2\", \"width\": 320, \"height\": 320}, \"thumbnail\": {\"url\": \"https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/14280460_1748649632069678_43848281_n.jpg?ig_cache_key=MTMzNjM0ODIzOTA4NzMwMzE0Mg%3D%3D.2\", \"width\": 150, \"height\": 150}, \"standard_resolution\": {\"url\": \"https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14280460_1748649632069678_43848281_n.jpg?ig_cache_key=MTMzNjM0ODIzOTA4NzMwMzE0Mg%3D%3D.2\", \"width\": 640, \"height\": 640}}, \"users_in_photo\": [], \"caption\": null, \"user_has_liked\": false, \"id\": \"1336348239087303142_3783043842\", \"user\": {\"username\": \"razdvatrizhepa\", \"profile_picture\": \"https://scontent.cdninstagram.com/t51.2885-19/s150x150/14063426_1759570317640473_1555452107_a.jpg\", \"id\": \"3783043842\", \"full_name\": \"Dima Erokhin\"}}, {\"attribution\": null, \"tags\": [\"\u043c\u0430\u043a\u0443\u043b\u0430\u0442\u0443\u0440\u0430\"], \"type\": \"image\", \"location\": null, \"comments\": {\"count\": 0}, \"filter\": \"Moon\", \"created_time\": \"1472725452\", \"link\": \"https://www.instagram.com/p/BJz1HdfhvMh/\", \"likes\": {\"count\": 7}, \"images\": {\"low_resolution\": {\"url\": \"https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/14052210_293440467695742_2005088558_n.jpg?ig_cache_key=MTMyOTYzOTkyNDE3MzMwNDYwOQ%3D%3D.2\", \"width\": 320, \"height\": 320}, \"thumbnail\": {\"url\": \"https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/14052210_293440467695742_2005088558_n.jpg?ig_cache_key=MTMyOTYzOTkyNDE3MzMwNDYwOQ%3D%3D.2\", \"width\": 150, \"height\": 150}, \"standard_resolution\": {\"url\": \"https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14052210_293440467695742_2005088558_n.jpg?ig_cache_key=MTMyOTYzOTkyNDE3MzMwNDYwOQ%3D%3D.2\", \"width\": 640, \"height\": 640}}, \"users_in_photo\": [], \"caption\": {\"created_time\": \"1472725452\", \"text\": \"by @saffftenko \n#\u043c\u0430\u043a\u0443\u043b\u0430\u0442\u0443\u0440\u0430\", \"from\": {\"username\": \"razdvatrizhepa\", \"profile_picture\": \"https://scontent.cdninstagram.com/t51.2885-19/s150x150/14063426_1759570317640473_1555452107_a.jpg\", \"id\": \"3783043842\", \"full_name\": \"Dima Erokhin\"}, \"id\": \"17842009366192476\"}, \"user_has_liked\": false, \"id\": \"1329639924173304609_3783043842\", \"user\": {\"username\": \"razdvatrizhepa\", \"profile_picture\": \"https://scontent.cdninstagram.com/t51.2885-19/s150x150/14063426_1759570317640473_1555452107_a.jpg\", \"id\": \"3783043842\", \"full_name\": \"Dima Erokhin\"}}]}"
+		}
+	}
+}
+```
+
+
+## Instagram.searchLocationsByArea	
+Search for a location by geographic coordinate.
+
+| Field                | Type   | Description  |
+| -------------        |--------| -------------|
+| `accessToken`*       |string  | The accessToken obtained from Instagram. |
+| `lat`*               |string  | Latitude of the center search coordinate. If used, lng is required. |
+| `lng`*               |string  | Longitude of the center search coordinate. If used, lat is required. |
+| `distance`           |integer | Default is 500m (distance=500), max distance is 750. |
+| `facebook_places_id` |integer | Returns a location mapped off of a Facebook places id. If used, lat and lng are not required. |
+
+
+#### Request example
+```json
+{
+	"accessToken": "XXXXXXX",
+	"locationId": 1,
+}
+```
+
+#### Response example
+```json
+{
+	"callback": "success",
+	"contextWrites": {
+		"#": {
+			"to" :"{\"data\":[{\"id\":\"788029\",\"latitude\":48.8588443,\"longitude\":2.2943506,\"name\":\"Eiffel Tower, Paris\"},{\"id\":\"545331\",\"latitude\":48.85833405966226,\"longitude\":2.294340133666991,\"name\":\"Restaurant 58 Tour Eiffel\"},{\"id\":\"421930\",\"latitude\":48.858326,\"longitude\":2.294505,\"name\":\"American Library in Paris\"}]}"
 		}
 	}
 }

@@ -5,9 +5,14 @@ module.exports.do = function(req, res){
         "description": "The Instagram Package can be used to build non-automated, authentic, high-quality apps and services.",
         'image': 'http://3835642c2693476aa717-d4b78efce91b9730bcca725cf9bb0b37.r51.cf1.rackcdn.com/Instagram_App_Large_May2016_200.png',
         'repo': 'https://github.com/RapidSoftwareSolutions/marketplace-instagram-package',
-        /*'accounts': {
-            'domain': 'google.com'
-        },*/
+        'accounts': {
+            'domain': 'instagram.com',
+            'credentials': [
+                'clientId',
+                'clientSecret',
+                'accessToken'
+            ]
+        },
         'blocks': [{
             "name":"getAccessToken",
             "args":[
@@ -687,6 +692,96 @@ module.exports.do = function(req, res){
                     'info': 'Success'
                 }
             ]
-        }]
+        },
+        {
+            "name":"getLocationInformation",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "Get information about a tag object.",
+                },
+                {
+                    name: "locationId",
+                    type: "String",
+                    info: "The location id on Instagram.",
+                },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },
+        {
+            "name":"getRecentMediaFromLocation",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "Get information about a tag object.",
+                },
+                {
+                    name: "locationId",
+                    type: "String",
+                    info: "The locationId on Instagram.",
+                },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },
+        {
+            "name":"searchLocationsByArea",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "String",
+                    info: "Get information about a tag object.",
+                },
+                {
+                    name: "lat",
+                    type: "String",
+                    info: "Latitude of the center search coordinate. If used, lng is required.",
+                },
+                {
+                    name: "lng",
+                    type: "String",
+                    info: "Longitude of the center search coordinate. If used, lat is required.",
+                }, 
+                {
+                    name: "facebook_places_id",
+                    type: "String",
+                    info: "Returns a location mapped off of a Facebook places id. If used, lat and lng are not required.",
+                },
+                {
+                    name: "distance",
+                    type: "String",
+                    info: "Default is 500m (distance=500), max distance is 750.",
+                },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },]
     })
 };
