@@ -7,7 +7,7 @@ const express       = require('express'),
 
 /** SET UP **/
 const PORT          = process.env.PORT || 8080;
-global.PACKAGE_NAME = "marketplace-instagram-package";
+global.PACKAGE_NAME = "Instagram";
 global.REDIRECT_URI = `http://localhost:8080/api/${PACKAGE_NAME}/callback`;
 //global.REDIRECT_URI = require('os').hostname() + `/api/${PACKAGE_NAME}/callback`;
 
