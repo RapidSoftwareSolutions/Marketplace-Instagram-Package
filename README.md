@@ -12,13 +12,6 @@ This Package can be used to build non-automated, authentic, high-quality apps an
 7. Copy and save your credentials.
 8. Use `Client ID` and `Client Secret` for call `Instagram.getAccessToken` method.
 
-## Instagram.getAccessToken
-
-| Field            | Type   | Description  |
-| -------------    |--------| -------------|
-| `cliendId`       |string  | The Cliend Id obtained from Instagram. |
-| `clientSecret`   |string  | The Cliend Secret obtained from Instagram. |
-
 ## Instagram.getCurrentUser
 Get information about the owner of the `accessToken`.
 
