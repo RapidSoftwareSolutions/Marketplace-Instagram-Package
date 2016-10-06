@@ -16,7 +16,7 @@ app.use(bodyParser.json(({limit: '50mb'})));
 app.use(bodyParser.urlencoded({limit: '50mb', extended:true}));
 
 app.all(`/api/${PACKAGE_NAME}`, require('./api/metadata.js').do);
-app.all(`/api/${PACKAGE_NAME}/getAccessToken`, require('./api/auth.js').auth);
+//app.all(`/api/${PACKAGE_NAME}/getAccessToken`, require('./api/auth.js').auth);
 app.get(`/api/${PACKAGE_NAME}/callback`, require('./api/auth.js').callback);
 
 fs.readdirSync('api/').forEach((file) => {
