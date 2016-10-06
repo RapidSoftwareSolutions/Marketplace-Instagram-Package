@@ -8,8 +8,6 @@ module.exports.do = function(req, res){
         'accounts': {
             'domain': 'instagram.com',
             'credentials': [
-                'clientId',
-                'clientSecret',
                 'accessToken'
             ]
         },
@@ -18,7 +16,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 }
             ],
@@ -38,7 +36,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -63,7 +61,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 /*{
@@ -98,7 +96,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -138,7 +136,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 /*{
@@ -163,7 +161,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -193,7 +191,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 }
             ],
@@ -213,7 +211,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 }
             ],
@@ -233,7 +231,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 }
             ],
@@ -253,7 +251,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -278,7 +276,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -303,7 +301,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -328,7 +326,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -353,7 +351,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -378,7 +376,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -403,7 +401,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -438,7 +436,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -463,7 +461,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -493,7 +491,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -523,7 +521,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -548,7 +546,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -573,7 +571,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
@@ -598,7 +596,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "Get information about a tag object.",
                 },
                 {
@@ -623,7 +621,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "Get information about a tag object.",
                 },
                 {
@@ -648,7 +646,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "Get information about a tag object.",
                 },
                 {
@@ -673,7 +671,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "Get information about a tag object.",
                 },
                 {
@@ -698,7 +696,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "Get information about a tag object.",
                 },
                 {
@@ -723,7 +721,7 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "Get information about a tag object.",
                 },
                 {
