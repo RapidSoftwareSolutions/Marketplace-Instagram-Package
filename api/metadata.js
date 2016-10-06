@@ -14,31 +14,6 @@ module.exports.do = function(req, res){
             ]
         },
         'blocks': [{
-            "name":"getAccessToken",
-            "args":[
-                {
-                    name: "clientId",
-                    type: "String",
-                    info: "The client id obtained from Instagram.",
-                },
-                {
-                    name: "clientSecret",
-                    type: "String",
-                    info: "The client secret obtained from Instagram.",
-                }
-            ], 
-            'callbacks':[
-                {
-                    'name':'error',
-                    'info': 'Error'
-                },
-                {
-                    'name':'success',
-                    'info': 'Success'
-                }
-            ]
-        },
-        {
             "name":"getCurrentUser",
             "args":[
                 {
