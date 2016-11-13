@@ -11,7 +11,7 @@ module.exports = (req, res) => {
     };
 
     if(!accessToken || !query) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'accessToken, query');
         return;
     }
 

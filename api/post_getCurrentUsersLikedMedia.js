@@ -10,7 +10,7 @@ module.exports = (req, res) => {
     };
 
     if(!accessToken || !userId) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'accessToken, userId');
         return;
     }
 

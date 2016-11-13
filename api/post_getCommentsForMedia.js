@@ -11,7 +11,7 @@ module.exports = (req, res) => {
     };
 
     if(!accessToken || !mediaId) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'accessToken, mediaId');
         return;
     }
 

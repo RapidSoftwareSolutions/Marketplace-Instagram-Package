@@ -11,7 +11,7 @@ module.exports = (req, res) => {
     };
 
     if(!accessToken || !lat || !lng) {
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'accessToken, lat, lng');
         return;
     }
 

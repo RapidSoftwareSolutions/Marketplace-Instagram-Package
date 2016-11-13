@@ -2,7 +2,7 @@ const _   = require('../lib/functions');
 const api = require('instagram-node').instagram();
 
 module.exports.auth = (req, res) => {
-    let { clientId, clientSecret, to="to" } = req.query;
+    let { clientId, clientSecret, to="to" } = req.query.clientSecret ? req.query : req.body.args;
 
     let r = {
         callback        : "",

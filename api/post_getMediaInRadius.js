@@ -12,7 +12,7 @@ module.exports = (req, res) => {
 
     if(!accessToken || !lng || !lat) {
         console.log('here');
-        _.echoBadEnd(r, to, res);
+        _.echoBadEnd(r, to, res, 'accessToken, lng, lat');
         return;
     }
 
