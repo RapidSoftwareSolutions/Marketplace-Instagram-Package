@@ -12,6 +12,8 @@ This Package can be used to build non-automated, authentic, high-quality apps an
 7. Copy and save your credentials.
 8. Use `Client ID` and `Client Secret` for call `Instagram.getAccessToken` method.
 
+Pro-tip: Use this tool to generate an OAuth access toke more quickly: https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html
+
 ## Instagram.getCurrentUser
 Get information about the owner of the `accessToken`.
 
