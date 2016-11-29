@@ -1,6 +1,8 @@
 
 # Instagram Package
-This package can be used to build non-automated, authentic, high-quality apps and services.
+This package can be used to build apps that connect to Instagram.
+
+Use [this tool](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html) to get a developer account and generate an OAuth access toke more quickly: [https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html)
 
 Need more? Here's an [in-depth tutorial](https://goo.gl/t0ftRP) on how to use and connect to the Instagram API through RapidAPI.
 
@@ -13,8 +15,6 @@ Need more? Here's an [in-depth tutorial](https://goo.gl/t0ftRP) on how to use an
 6. Click on <kbd>Manage</kbd> in youe application block.
 7. Copy and save your credentials.
 8. Use `Client ID` and `Client Secret` for call `Instagram.getAccessToken` method.
-
-Pro-tip: Use [this tool](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html) to generate an OAuth access toke more quickly: [https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html)
 
 ## Instagram.getCurrentUser
 Get information about the owner of the `accessToken`.
