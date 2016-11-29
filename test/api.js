@@ -18,14 +18,14 @@ const clientId     = 'a2e86bc51d47479199c249905affbe1c-caYDM',
 let commentId;
 
 
-describe('Get access token', () => {
+/*describe('Get access token', () => {
     it('Redirect to instagram', () => {
         return request(app)
         .get(`/api/${global.PACKAGE_NAME}/getAccessToken?clientId=${clientId}&clientSecret=${clientSecret}`)
         .expect(302)
         .then((res) => {});
     });
-});
+});*/
 
 describe('User section', () => {
     it('/getCurrentUser', () => {

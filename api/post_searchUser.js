@@ -20,8 +20,8 @@ module.exports = (req, res) => {
     if(count) uri += `&count=${count}`;
 
     return request(uri, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);

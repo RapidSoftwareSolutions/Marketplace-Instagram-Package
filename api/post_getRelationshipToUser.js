@@ -18,8 +18,8 @@ module.exports = (req, res) => {
     let uri = `https://api.instagram.com/v1/users/${userId}/relationship?access_token=${accessToken}`;
 
     return request(uri, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = body;
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = body;
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);

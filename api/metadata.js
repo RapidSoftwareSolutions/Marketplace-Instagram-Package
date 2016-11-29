@@ -8,46 +8,19 @@ module.exports.do = function(req, res){
         'accounts': {
             'domain': 'instagram.com',
             'credentials': [
-                'clientId',
-                'clientSecret',
                 'accessToken'
             ]
         },
         'blocks': [{
-            "name":"getAccessToken",
-            "args":[
-                {
-                    name: "clientId",
-                    type: "String",
-                    info: "The client id obtained from Instagram.",
-                },
-                {
-                    name: "clientSecret",
-                    type: "String",
-                    info: "The client secret obtained from Instagram.",
-                }
-            ], 
-            'callbacks':[
-                {
-                    'name':'error',
-                    'info': 'Error'
-                },
-                {
-                    'name':'success',
-                    'info': 'Success'
-                }
-            ]
-        },
-        {
             "name":"getCurrentUser",
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 }
             ],
-    	    'callbacks':[
+            'callbacks':[
                     {
                     'name':'error',
                     'info': 'Error'
@@ -63,13 +36,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "The user id on Instagram.",
+                    info: "Required: The user id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -88,10 +61,10 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
-                /*{
+                {
                     name: "count",
                     type: "Number",
                     info: "Count of media to return.",
@@ -105,7 +78,7 @@ module.exports.do = function(req, res){
                     name: "maxId",
                     type: "String",
                     info: "Return media earlier than this maxId.",
-                },*/
+                }
             ],
             'callbacks':[
                     {
@@ -123,15 +96,15 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "The user id on Instagram.",
+                    info: "Required: The user id on Instagram.",
                 },
-                /*{
+                {
                     name: "count",
                     type: "Number",
                     info: "Count of media to return.",
@@ -145,7 +118,7 @@ module.exports.do = function(req, res){
                     name: "maxId",
                     type: "String",
                     info: "Return media earlier than this maxId.",
-                },*/
+                }
             ],
             'callbacks':[
                     {
@@ -163,14 +136,14 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
-                /*{
+                {
                     name: "maxLikeId",
                     type: "String",
                     info: "Return media liked before this id."
-                }*/
+                }
             ],
             'callbacks':[
                     {
@@ -188,19 +161,19 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "query",
                     type: "String",
-                    info: "A query string."
+                    info: "Required: A query string."
                 },
-                /*{
+                {
                     name: "count",
                     type: "String",
                     info: "Number of users to return."
-                }*/
+                }
             ],
             'callbacks':[
                     {
@@ -218,8 +191,8 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 }
             ],
             'callbacks':[
@@ -238,8 +211,8 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 }
             ],
             'callbacks':[
@@ -258,8 +231,8 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 }
             ],
             'callbacks':[
@@ -278,13 +251,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "The user id on Instagram.",
+                    info: "Required: The user id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -303,13 +276,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "The user id on Instagram.",
+                    info: "Required: The user id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -328,13 +301,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "The user id on Instagram.",
+                    info: "Required: The user id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -353,13 +326,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "The user id on Instagram.",
+                    info: "Required: The user id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -378,13 +351,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "The user id on Instagram.",
+                    info: "Required: The user id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -403,13 +376,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "The media id on Instagram.",
+                    info: "Required: The media id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -428,18 +401,18 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
+                    type: "credentials",
                     info: "The access_token obtained from Instagram.",
                 },
                 {
                     name: "lat",
                     type: "String",
-                    info: "Latitude of the center search coordinate. If used, lng is required.",
+                    info: "Required: Latitude of the center search coordinate. If used, lng is required.",
                 },
                 {
                     name: "lng",
                     type: "String",
-                    info: "Longitude of the center search coordinate. If used, lat is required.",
+                    info: "Required: Longitude of the center search coordinate. If used, lat is required.",
                 },
                 {
                     name: "distance",
@@ -463,13 +436,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "The media id on Instagram.",
+                    info: "Required: The media id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -488,18 +461,18 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "The media id on Instagram.",
+                    info: "Required: The media id on Instagram.",
                 },
                 {
                     name: "text",
                     type: "String",
-                    info: "Text to post as a comment on the media object as specified in media-id.",
+                    info: "Required: Text to post as a comment on the media object as specified in media-id.",
                 }
             ],
             'callbacks':[
@@ -518,18 +491,18 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "The media id on Instagram.",
+                    info: "Required: The media id on Instagram.",
                 },
                 {
                     name: "commentId",
                     type: "String",
-                    info: "The comment id on Instagram.",
+                    info: "Required: The comment id on Instagram.",
                 }
             ],
             'callbacks':[
@@ -548,13 +521,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "The media id on Instagram.",
+                    info: "Required: The media id on Instagram.",
                 },
             ],
             'callbacks':[
@@ -573,13 +546,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "The media id on Instagram.",
+                    info: "Required: The media id on Instagram.",
                 },
             ],
             'callbacks':[
@@ -598,13 +571,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "The access_token obtained from Instagram.",
+                    type: "credentials",
+                    info: "Required: The access_token obtained from Instagram.",
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "The media id on Instagram.",
+                    info: "Required: The media id on Instagram.",
                 },
             ],
             'callbacks':[
@@ -623,13 +596,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "Get information about a tag object.",
+                    type: "credentials",
+                    info: "Required: Get information about a tag object.",
                 },
                 {
                     name: "tagName",
                     type: "String",
-                    info: "The tag name on Instagram.",
+                    info: "Required: The tag name on Instagram.",
                 },
             ],
             'callbacks':[
@@ -648,13 +621,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "Get information about a tag object.",
+                    type: "credentials",
+                    info: "Required: Get information about a tag object.",
                 },
                 {
                     name: "tagName",
                     type: "String",
-                    info: "The tag name on Instagram.",
+                    info: "Required: The tag name on Instagram.",
                 },
             ],
             'callbacks':[
@@ -673,13 +646,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "Get information about a tag object.",
+                    type: "credentials",
+                    info: "Required: Get information about a tag object.",
                 },
                 {
                     name: "query",
                     type: "String",
-                    info: "A valid tag name without a leading #. (eg. snowy, nofilter).",
+                    info: "Required: A valid tag name without a leading #. (eg. snowy, nofilter).",
                 },
             ],
             'callbacks':[
@@ -698,13 +671,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "Get information about a tag object.",
+                    type: "credentials",
+                    info: "Required: Get information about a tag object.",
                 },
                 {
                     name: "locationId",
                     type: "String",
-                    info: "The location id on Instagram.",
+                    info: "Required: The location id on Instagram.",
                 },
             ],
             'callbacks':[
@@ -723,13 +696,13 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "Get information about a tag object.",
+                    type: "credentials",
+                    info: "Required: Get information about a tag object.",
                 },
                 {
                     name: "locationId",
                     type: "String",
-                    info: "The locationId on Instagram.",
+                    info: "Required: The locationId on Instagram.",
                 },
             ],
             'callbacks':[
@@ -748,18 +721,18 @@ module.exports.do = function(req, res){
             "args":[
                 {
                     name: "accessToken",
-                    type: "String",
-                    info: "Get information about a tag object.",
+                    type: "credentials",
+                    info: "Required: Get information about a tag object.",
                 },
                 {
                     name: "lat",
                     type: "String",
-                    info: "Latitude of the center search coordinate. If used, lng is required.",
+                    info: "Required: Latitude of the center search coordinate. If used, lng is required.",
                 },
                 {
                     name: "lng",
                     type: "String",
-                    info: "Longitude of the center search coordinate. If used, lat is required.",
+                    info: "Required: Longitude of the center search coordinate. If used, lat is required.",
                 }, 
                 {
                     name: "facebook_places_id",

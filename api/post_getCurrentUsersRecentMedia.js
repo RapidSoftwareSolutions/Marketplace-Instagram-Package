@@ -22,8 +22,8 @@ module.exports = (req, res) => {
     if(minId) uri += `&min_id=${minId}`;
 
     return request(uri, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success';
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);

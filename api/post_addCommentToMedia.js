@@ -18,8 +18,8 @@ module.exports = (req, res) => {
     let uri = `https://api.instagram.com/v1/media/${mediaId}/comments`;
 
     return request.post({url: uri, form: {text: text, access_token: accessToken}}, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = body;
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = body;
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = err || body;

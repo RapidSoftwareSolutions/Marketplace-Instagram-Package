@@ -18,8 +18,8 @@ module.exports = (req, res) => {
     let uri = `https://api.instagram.com/v1/locations/${locationId}/media/recent?access_token=${accessToken}`;
     
     return request(uri, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);

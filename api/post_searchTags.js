@@ -16,8 +16,8 @@ module.exports = (req, res) => {
     }
 
     return request(`https://api.instagram.com/v1/tags/search?q=${query}&access_token=${accessToken}`, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = JSON.stringify(body);
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = JSON.stringify(body);
             r.callback = 'success'; 
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);

@@ -16,8 +16,8 @@ module.exports = (req, res) => {
     }
 
     return request(`https://api.instagram.com/v1/tags/${tagName}?access_token=${accessToken}`, (err, response, body) => {
-    	if(!err && response.statusCode == 200) {
-    		r.contextWrites[to] = body;
+        if(!err && response.statusCode == 200) {
+            r.contextWrites[to] = body;
             r.callback = 'success'; 
         } else {
             console.log(err, body)
