@@ -1,6 +1,8 @@
 
 # Instagram Package
-This Package can be used to build non-automated, authentic, high-quality apps and services.
+This package can be used to build non-automated, authentic, high-quality apps and services.
+
+Need more? Here's an [in-depth tutorial](https://goo.gl/t0ftRP) on how to use and connect to the Instagram API through RapidAPI.
 
 ## How to get credentials:
 1. Go to [Instagram developer page](https://www.instagram.com/developer/).
