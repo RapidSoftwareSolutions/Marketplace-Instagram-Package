@@ -2,12 +2,10 @@
 
 "use strict";
 
-/** IMPORTS **/
 const express       = require('express'),
     bodyParser      = require('body-parser'),
     fs              = require('fs');
 
-/** SET UP **/
 const PORT          = process.env.PORT || 8080;
 global.PACKAGE_NAME = "Instagram";
 global.REDIRECT_URI = `http://localhost:8080/api/${PACKAGE_NAME}/callback`;
@@ -35,6 +33,5 @@ fs.readdirSync('api/').forEach((file) => {
     } catch(e) { return; }
 });
 
-/** START LISTENING **/
 app.listen(PORT);
 module.exports = app;

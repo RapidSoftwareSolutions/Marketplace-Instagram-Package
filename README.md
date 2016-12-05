@@ -1,7 +1,13 @@
 # Instagram Package
+<<<<<<< HEAD
 The Instagram Package can be used to build non-automated, authentic, high-quality apps and services.
 * Domain: instagram.com
 * Credentials: accessToken
+=======
+This package can be used to build non-automated, authentic, high-quality apps and services.
+
+Need more? Here's an [in-depth tutorial](https://goo.gl/t0ftRP) on how to use and connect to the Instagram API through RapidAPI.
+>>>>>>> 57a6852447875dd91fd52bf23ccd5b86e47e72ad
 
 ## How to get credentials:
 1. Go to [Instagram developer page](https://www.instagram.com/developer/).
@@ -13,6 +19,8 @@ The Instagram Package can be used to build non-automated, authentic, high-qualit
 7. Copy and save your credentials.
 8. Use `Client ID` and `Client Secret` for call `Instagram.getAccessToken` method.
  
+
+Pro-tip: Use [this tool](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html) to generate an OAuth access toke more quickly: [https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html)
 
 ## Instagram.getCurrentUser
 Method description
