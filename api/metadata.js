@@ -14,6 +14,7 @@ module.exports.do = function(req, res){
         },
         'blocks': [{
             "name":"getCurrentUser",
+            "description": "Get information about the owner of the `accessToken`.",
             "args":[
                 {
                     name: "accessToken",
@@ -35,6 +36,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getUserInformation",
+            "description": "Get information about any Instagram user.",
             "args":[
                 {
                     name: "accessToken",
@@ -62,6 +64,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getCurrentUsersRecentMedia",
+            "description": "Get the most recent media published by the owner of the access_token.",
             "args":[
                 {
                     name: "accessToken",
@@ -101,6 +104,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getUsersRecentMedia",
+            "description": "Get the most recent media published by a user.",
             "args":[
                 {
                     name: "accessToken",
@@ -146,6 +150,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getCurrentUsersLikedMedia",
+            "description": "Get the list of recent media liked by the owner of the access_token.",
             "args":[
                 {
                     name: "accessToken",
@@ -173,6 +178,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"searchUser",
+            "description": "Get the list of recent media liked by the owner of the access_token.",
             "args":[
                 {
                     name: "accessToken",
@@ -206,6 +212,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getUsersFollows",
+            "description": "Get the list of users this user follows.",
             "args":[
                 {
                     name: "accessToken",
@@ -227,6 +234,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getUsersFollowers",
+            "description": "Get the list of users this user is followed by.",
             "args":[
                 {
                     name: "accessToken",
@@ -248,6 +256,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getUsersRequestedBy",
+            "description": "List the users who have requested this user's permission to follow.",
             "args":[
                 {
                     name: "accessToken",
@@ -269,6 +278,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getRelationshipToUser",
+            "description": "Get information about a relationship to another user. Relationships are expressed using the following terms in the response:",
             "args":[
                 {
                     name: "accessToken",
@@ -296,6 +306,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"followUser",
+            "description": "Follow a user.",
             "args":[
                 {
                     name: "accessToken",
@@ -323,6 +334,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"unfollowUser",
+            "description": "Unfollow a user.",
             "args":[
                 {
                     name: "accessToken",
@@ -350,6 +362,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"approveUserRequest",
+            "description": "Approve a follow request by a user.",
             "args":[
                 {
                     name: "accessToken",
@@ -377,6 +390,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"ignoreUserRequest",
+            "description": "Ignore a follow request by a user.",
             "args":[
                 {
                     name: "accessToken",
@@ -404,6 +418,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getMediaInformation",
+            "description": "Get information about a media object. Use the type field to differentiate between image and video media in the response. You will also receive the user_has_liked field which tells you whether the owner of the access_token has liked this media.",
             "args":[
                 {
                     name: "accessToken",
@@ -431,6 +446,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getMediaInRadius",
+            "description": "Search for recent media in a given area.",
             "args":[
                 {
                     name: "accessToken",
@@ -470,6 +486,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getCommentsForMedia",
+            "description": "Get a list of recent comments on a media object.",
             "args":[
                 {
                     name: "accessToken",
@@ -497,6 +514,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"addCommentToMedia",
+            "description": "Create a comment on a media object.",
             "args":[
                 {
                     name: "accessToken",
@@ -530,6 +548,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"removeCommentFromMedia",
+            "description": "Remove a comment either on the authenticated user's media object or authored by the authenticated user.",
             "args":[
                 {
                     name: "accessToken",
@@ -563,6 +582,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getLikesForMedia",
+            "description": "Get a list of users who have liked this media.",
             "args":[
                 {
                     name: "accessToken",
@@ -590,6 +610,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"addLikeToMedia",
+            "description": "Create a comment on a media object.",
             "args":[
                 {
                     name: "accessToken",
@@ -617,6 +638,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"removeLikeFromMedia",
+            "description": "Remove a comment on a media object.",
             "args":[
                 {
                     name: "accessToken",
@@ -644,6 +666,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getTagInformation",
+            "description": "Get information about a tag object.",
             "args":[
                 {
                     name: "accessToken",
@@ -671,6 +694,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getTagRecentMedia",
+            "description": "Get information about a tag object.",
             "args":[
                 {
                     name: "accessToken",
@@ -698,6 +722,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"searchTags",
+            "description": "Get information about a tag object.",
             "args":[
                 {
                     name: "accessToken",
@@ -725,6 +750,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getLocationInformation",
+            "description": "Get information about a location.",
             "args":[
                 {
                     name: "accessToken",
@@ -752,6 +778,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"getRecentMediaFromLocation",
+            "description": "Get a list of recent media objects from a given location.",
             "args":[
                 {
                     name: "accessToken",
@@ -779,6 +806,7 @@ module.exports.do = function(req, res){
         },
         {
             "name":"searchLocationsByArea",
+            "description": "Search for a location by geographic coordinate.",
             "args":[
                 {
                     name: "accessToken",
