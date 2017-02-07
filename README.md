@@ -1,3 +1,5 @@
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Instagram/functions?utm_source=RapidAPIGitHub_InstagramFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # Instagram Package
 This package can be used to build apps that connect to Instagram.
 
