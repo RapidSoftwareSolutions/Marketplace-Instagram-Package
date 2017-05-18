@@ -3,19 +3,24 @@
 # Instagram Package
 This package can be used to build apps that connect to Instagram.
 
-Use [this tool](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html) to get a developer account and generate an OAuth access toke more quickly: [https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html](https://rapidsoftwaresolutions.github.io/OAuthTokenGenerator/instagram/1.html)
-
 Need more? Here's an [in-depth tutorial](https://goo.gl/t0ftRP) on how to use and connect to the Instagram API through RapidAPI.
 
 ## How to get credentials:
+Navigate to our [OAuth Generator](https://rapidoauth.com/instagram).
+
+OR
+
+Follow these instructions:
+
 1. Go to [Instagram developer page](https://www.instagram.com/developer/).
-2. Click on <kbd>Register Your Application</kbd>.
-3. Click on <kbd>Register a New Client</kbd>.
-4. Fill the form and click on <kbd>Register</kbd>.
-5. Go to [Clients manager](https://www.instagram.com/developer/clients/manage/).
-6. Click on <kbd>Manage</kbd> in youe application block.
+2. Click on "Register Your Application".
+3. Click on "Register a New Client".
+4. Fill the form and click on "Register".
+5. Go to [Clients Manager](https://www.instagram.com/developer/clients/manage/).
+6. Click on "Manage" in your application block.
 7. Copy and save your credentials.
-8. Use `Client ID` and `Client Secret` for call `Instagram.getAccessToken` method.
+8. Use your Client ID and Client Secret to call the [getAccessToken endpoint](https://rapidapi.com/package/Instagram/functions/getAccessToken)
+
 ## Instagram.getCurrentUser
 Get information about the owner of the `accessToken`.
 
