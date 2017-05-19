@@ -3,21 +3,21 @@ const request = require('request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, userId, to="to" } = req.body.args;
+    let { clientId, clientSecret, redirectUri, code, to="to"} = req.body.args;
 
     let r = {
         callback        : "",
         contextWrites   : {}
     };
 
-    if(!accessToken || !userId) {
-        _.echoBadEnd(r, to, res, 'accessToken, userId');
+    if(!clientId || !clientSecret || !redirectUri || !code) {
+        _.echoBadEnd(r, to, res, 'clientId, clientSecret, redirectUri, code');
         return;
     }
 
-    let uri = `https://api.instagram.com/v1/users/${userId}/relationship?access_token=${accessToken}`;
+    let uri = `https://api.instagram.com/oauth/access_token`;
 
-    return request.post({url: uri, form: {action: 'follow', access_token: accessToken}}, (err, response, body) => {
+    return request.post({url: uri, form: {client_id: clientId, client_secret: clientSecret, redirect_uri:redirectUri, code:code, grant_type:'authorization_code'}}, (err, response, body) => {
         if(!err && response.statusCode == 200) {
             r.contextWrites[to] = body;
             r.callback = 'success';

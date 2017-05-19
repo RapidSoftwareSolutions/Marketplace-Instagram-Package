@@ -21,6 +21,16 @@ Follow these instructions:
 7. Copy and save your credentials.
 8. Use your Client ID and Client Secret to call the [getAccessToken endpoint](https://rapidapi.com/package/Instagram/functions/getAccessToken)
 
+## Instagram.getAccessToken
+Generate access token for user.
+
+| Field          | Type       | Description
+|----------------|------------|----------
+| clientId       | credentials| Required: The client id obtained from Instagram.
+| clientSecret   | credentials| Required: The client secret obtained from Instagram.
+| redirectUri    | String     | Required: The redirectUri set in your application
+| code           | String     | Required: The code received from the user
+
 ## Instagram.getCurrentUser
 Get information about the owner of the `accessToken`.
 
@@ -253,4 +263,3 @@ Search for a location by geographic coordinate.
 | lng               | String     | Required: Longitude of the center search coordinate. If used, lat is required.
 | facebook_places_id| String     | Returns a location mapped off of a Facebook places id. If used, lat and lng are not required.
 | distance          | String     | Default is 500m (distance=500), max distance is 750.
-

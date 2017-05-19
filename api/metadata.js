@@ -12,7 +12,52 @@ module.exports.do = function(req, res){
                 'accessToken'
             ]
         },
-        'blocks': [{
+        'blocks': [
+          {
+              "name":"getAccessToken",
+              "description": "Generate access token for user.",
+              "args":[
+                  {
+                      name: "clientId",
+                      type: "credentials",
+                      info: "Required: The clientId obtained from Instagram.",
+                      required: true,
+                      generator: "http://rapidoauth.com/instagram"
+                  },
+                  {
+                      name: "clientSecret",
+                      type: "credentials",
+                      info: "Required: The clientSecret obtained from Instagram.",
+                      required: true,
+                      generator: "http://rapidoauth.com/instagram"
+                  },
+                  {
+                      name: "redirectUri",
+                      type: "String",
+                      info: "Required: The redirectUri set in your application",
+                      required: true,
+                      generator: "http://rapidoauth.com/instagram"
+                  },
+                  {
+                      name: "code",
+                      type: "String",
+                      info: "Required: The code received from the user",
+                      required: true,
+                      generator: "http://rapidoauth.com/instagram"
+                  }
+              ],
+              'callbacks':[
+                      {
+                      'name':'error',
+                      'info': 'Error'
+                  },
+                  {
+                      'name':'success',
+                      'info': 'Success'
+                  }
+              ]
+          },
+          {
             "name":"getCurrentUser",
             "description": "Get information about the owner of the `accessToken`.",
             "args":[
@@ -853,7 +898,7 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "Required: Longitude of the center search coordinate. If used, lat is required.",
                     required: true,
-                }, 
+                },
                 {
                     name: "facebook_places_id",
                     type: "String",
