@@ -3,7 +3,7 @@ const request = require('../request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, distance, to="to" } = req.body.args;
+    let { accessToken, distance, lat, lng, coordinate, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
@@ -20,7 +20,7 @@ module.exports = (req, res) => {
      coord = coordinate.split(",");
      lat = coord[0];
      lng = coord[1];
-   } 
+   }
 
     let uri = `https://api.instagram.com/v1/media/search?lat=${lat}&lng=${lng}&distance=${distance || 1000}&access_token=${accessToken}`;
 
