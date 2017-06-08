@@ -10,7 +10,7 @@ module.exports = (req, res) => {
         contextWrites   : {}
     };
 
-    if(!accessToken || !lng || !lat) {
+    if(!accessToken) {
         console.log('here');
         _.echoBadEnd(r, to, res, 'accessToken, lng, lat');
         return;
@@ -20,10 +20,7 @@ module.exports = (req, res) => {
      coord = coordinate.split(",");
      lat = coord[0];
      lng = coord[1];
-   } else {
-     lat = lat;
-     lng = lng;
-   }
+   } 
 
     let uri = `https://api.instagram.com/v1/media/search?lat=${lat}&lng=${lng}&distance=${distance || 1000}&access_token=${accessToken}`;
 
