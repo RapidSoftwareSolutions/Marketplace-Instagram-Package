@@ -21,6 +21,17 @@ Follow these instructions:
 7. Copy and save your credentials.
 8. Use your Client ID and Client Secret to call the [getAccessToken endpoint](https://rapidapi.com/package/Instagram/functions/getAccessToken)
 
+## Custom datatypes:
+ |Datatype|Description|Example
+ |--------|-----------|----------
+ |Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+ |Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+ |List|Simple array|```["123", "sample"]```
+ |Select|String with predefined values|```sample```
+ |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
+
+
+
 ## Instagram.getAccessToken
 Generate access token for user.
 
@@ -159,8 +170,7 @@ Search for recent media in a given area.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The access_token obtained from Instagram.
-| lat        | String     | Required: Latitude of the center search coordinate. If used, lng is required.
-| lng        | String     | Required: Longitude of the center search coordinate. If used, lat is required.
+| coordinate        | Map     | Required: Latitude and longitude coma separated of the center search coordinate.
 | distance   | String     | Default is 1km (`distance`=1000), max distance is 5km..
 
 ## Instagram.getCommentsForMedia
@@ -259,7 +269,6 @@ Search for a location by geographic coordinate.
 | Field             | Type       | Description
 |-------------------|------------|----------
 | accessToken       | credentials| Required: Get information about a tag object.
-| lat               | String     | Required: Latitude of the center search coordinate. If used, lng is required.
-| lng               | String     | Required: Longitude of the center search coordinate. If used, lat is required.
+| coordinate               | Map     | Latitude and longitude coma separated of the center search coordinate.
 | facebook_places_id| String     | Returns a location mapped off of a Facebook places id. If used, lat and lng are not required.
 | distance          | String     | Default is 500m (distance=500), max distance is 750.

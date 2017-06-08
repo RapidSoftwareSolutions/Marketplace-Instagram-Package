@@ -3,7 +3,7 @@ const request = require('../request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, lat, lng, distance, facebookpid, to="to" } = req.body.args;
+    let { accessToken, distance, facebookpid, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
@@ -15,6 +15,16 @@ module.exports = (req, res) => {
         return;
     }
 
+    if (typeof coordinate !== 'undefined'){
+     coordinate = coordinate.replace(/\s/g,'')
+     coord = coordinate.split(",");
+     lat = coord[0];
+     lng = coord[1];
+   } else {
+     lat = lat;
+     lng = lng;
+   }
+
     let uri = `https://api.instagram.com/v1/locations/search?access_token=${accessToken}`;
     uri += `&lat=${lat}&lng=${lng}`;
 
@@ -24,7 +34,7 @@ module.exports = (req, res) => {
     return request(uri, (err, response, body) => {
         if(!err && response.statusCode == 200) {
             r.contextWrites[to] = JSON.stringify(body);
-            r.callback = 'success'; 
+            r.callback = 'success';
         } else {
             r.contextWrites[to] = err || JSON.stringify(body);
             r.callback = 'error';

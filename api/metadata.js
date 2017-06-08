@@ -516,17 +516,12 @@ module.exports.do = function(req, res){
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
-                    name: "lat",
-                    type: "String",
-                    info: "Required: Latitude of the center search coordinate. If used, lng is required.",
-                    required: true,
+                  name: "coordinate",
+                  type: "Map",
+                  info: "Required: Latitude and longitude coma separated of the center search coordinate.",
+                  required: true,
                 },
-                {
-                    name: "lng",
-                    type: "String",
-                    info: "Required: Longitude of the center search coordinate. If used, lat is required.",
-                    required: true,
-                },
+
                 {
                     name: "distance",
                     type: "String",
@@ -888,17 +883,12 @@ module.exports.do = function(req, res){
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
-                    name: "lat",
-                    type: "String",
-                    info: "Required: Latitude of the center search coordinate. If used, lng is required.",
+                    name: "coordinate",
+                    type: "Map",
+                    info: "Required: Latitude and longitude coma separated of the center search coordinate.",
                     required: true,
                 },
-                {
-                    name: "lng",
-                    type: "String",
-                    info: "Required: Longitude of the center search coordinate. If used, lat is required.",
-                    required: true,
-                },
+
                 {
                     name: "facebook_places_id",
                     type: "String",
