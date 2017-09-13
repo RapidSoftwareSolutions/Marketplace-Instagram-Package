@@ -12,6 +12,9 @@ module.exports.do = function(req, res){
                 'accessToken'
             ]
         },
+        'steps': [
+            "Check out our Github docs(https://github.com/RapidSoftwareSolutions/Marketplace-Instagram-Package#how-to-get-credentials) for two options on connecting to Instagram"/
+        ],
         'blocks': [
           {
               "name":"getAccessToken",
