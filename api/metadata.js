@@ -13,7 +13,8 @@ module.exports.do = function(req, res){
             ]
         },
         'steps': [
-            "Check out our Github docs(https://github.com/RapidSoftwareSolutions/Marketplace-Instagram-Package#how-to-get-credentials) for two options on connecting to Instagram"/
+            "For testing the API, use our OAuth Generator (https://rapidoauth.com/instagram)",
+            "For production API usage, follow the steps on our Github docs(https://github.com/RapidSoftwareSolutions/Marketplace-Instagram-Package#how-to-get-credentials)"
         ],
         'blocks': [
           {
