@@ -37,32 +37,32 @@ Generate access token for user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| clientId       | credentials| Required: The client id obtained from Instagram.
-| clientSecret   | credentials| Required: The client secret obtained from Instagram.
-| redirectUri    | String     | Required: The redirectUri set in your application
-| code           | String     | Required: The code received from the user
+| clientId       | credentials| The client id obtained from Instagram.
+| clientSecret   | credentials| The client secret obtained from Instagram.
+| redirectUri    | String     | The redirectUri set in your application
+| code           | String     | The code received from the user
 
 ## Instagram.getCurrentUser
 Get information about the owner of the `accessToken`.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
 
 ## Instagram.getUserInformation
 Get information about any Instagram user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| userId         | String     | Required: The user id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| userId         | String     | The user id on Instagram.
 
 ## Instagram.getCurrentUsersRecentMedia
 Get the most recent media published by the owner of the access_token.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
 | minId          | String     | Return media later than this minId.
 | maxId          | String     | Return media earlier than this maxId.
 
@@ -71,8 +71,8 @@ Get the most recent media published by a user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| userId         | String     | Required: The user id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| userId         | String     | The user id on Instagram.
 | minId          | String     | Return media later than this minId.
 | maxId          | String     | Return media earlier than this maxId.
 
@@ -81,7 +81,7 @@ Get the list of recent media liked by the owner of the access_token.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
 | maxLikeId      | String     | Return media liked before this id.
 
 ## Instagram.searchUser
@@ -89,8 +89,8 @@ Get the list of recent media liked by the owner of the access_token.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| query          | String     | Required: A query string.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| query          | String     | A query string.
 | count          | String     | Number of users to return.
 
 ## Instagram.getUsersFollows
@@ -98,21 +98,21 @@ Get the list of users this user follows.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
 
 ## Instagram.getUsersFollowers
 Get the list of users this user is followed by.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
 
 ## Instagram.getUsersRequestedBy
 List the users who have requested this user's permission to follow.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
 
 ## Instagram.getRelationshipToUser
 Get information about a relationship to another user. Relationships are expressed using the following terms in the response:
@@ -120,47 +120,47 @@ Get information about a relationship to another user. Relationships are expresse
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The access_token obtained from Instagram.
-| userId     | String     | Required: The user id on Instagram.
+| userId     | String     | The user id on Instagram.
 
 ## Instagram.followUser
 Follow a user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| userId         | String     | Required: The user id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| userId         | String     | The user id on Instagram.
 
 ## Instagram.unfollowUser
 Unfollow a user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| userId         | String     | Required: The user id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| userId         | String     | The user id on Instagram.
 
 ## Instagram.approveUserRequest
 Approve a follow request by a user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| userId         | String     | Required: The user id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| userId         | String     | The user id on Instagram.
 
 ## Instagram.ignoreUserRequest
 Ignore a follow request by a user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| userId         | String     | Required: The user id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| userId         | String     | The user id on Instagram.
 
 ## Instagram.getMediaInformation
 Get information about a media object. Use the type field to differentiate between image and video media in the response. You will also receive the user_has_liked field which tells you whether the owner of the access_token has liked this media.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| mediaId        | String     | Required: The media id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| mediaId        | String     | The media id on Instagram.
 
 ## Instagram.getMediaInRadius
 Search for recent media in a given area.
@@ -168,7 +168,7 @@ Search for recent media in a given area.
 | Field      | Type       | Description
 |------------|------------|----------
 | accessToken| credentials| The access_token obtained from Instagram.
-| coordinate        | Map     | Required: Latitude and longitude coma separated of the center search coordinate.
+| coordinate        | Map     | Latitude and longitude coma separated of the center search coordinate.
 | distance   | String     | Default is 1km (`distance`=1000), max distance is 5km..
 
 ## Instagram.getCommentsForMedia
@@ -176,97 +176,97 @@ Get a list of recent comments on a media object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| mediaId        | String     | Required: The media id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| mediaId        | String     | The media id on Instagram.
 
 ## Instagram.addCommentToMedia
 Create a comment on a media object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| mediaId        | String     | Required: The media id on Instagram.
-| text           | String     | Required: Text to post as a comment on the media object as specified in media-id.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| mediaId        | String     | The media id on Instagram.
+| text           | String     | Text to post as a comment on the media object as specified in media-id.
 
 ## Instagram.removeCommentFromMedia
 Remove a comment either on the authenticated user's media object or authored by the authenticated user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| mediaId        | String     | Required: The media id on Instagram.
-| commentId      | String     | Required: The comment id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| mediaId        | String     | The media id on Instagram.
+| commentId      | String     | The comment id on Instagram.
 
 ## Instagram.getLikesForMedia
 Get a list of users who have liked this media.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| mediaId        | String     | Required: The media id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| mediaId        | String     | The media id on Instagram.
 
 ## Instagram.addLikeToMedia
 Create a comment on a media object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| mediaId        | String     | Required: The media id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| mediaId        | String     | The media id on Instagram.
 
 ## Instagram.removeLikeFromMedia
 Remove a comment on a media object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: The access_token obtained from Instagram.
-| mediaId        | String     | Required: The media id on Instagram.
+| accessToken    | credentials| The access_token obtained from Instagram.
+| mediaId        | String     | The media id on Instagram.
 
 ## Instagram.getTagInformation
 Get information about a tag object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: Get information about a tag object.
-| tagName        | String     | Required: The tag name on Instagram.
+| accessToken    | credentials| Get information about a tag object.
+| tagName        | String     | The tag name on Instagram.
 
 ## Instagram.getTagRecentMedia
 Get information about a tag object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: Get information about a tag object.
-| tagName        | String     | Required: The tag name on Instagram.
+| accessToken    | credentials| Get information about a tag object.
+| tagName        | String     | The tag name on Instagram.
 
 ## Instagram.searchTags
 Get information about a tag object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: Get information about a tag object.
-| query          | String     | Required: A valid tag name without a leading #. (eg. snowy, nofilter).
+| accessToken    | credentials| Get information about a tag object.
+| query          | String     | A valid tag name without a leading #. (eg. snowy, nofilter).
 
 ## Instagram.getLocationInformation
 Get information about a location.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: Get information about a tag object.
-| locationId     | String     | Required: The location id on Instagram.
+| accessToken    | credentials| Get information about a tag object.
+| locationId     | String     | The location id on Instagram.
 
 ## Instagram.getRecentMediaFromLocation
 Get a list of recent media objects from a given location.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| accessToken    | credentials| Required: Get information about a tag object.
-| locationId     | String     | Required: The locationId on Instagram.
+| accessToken    | credentials| Get information about a tag object.
+| locationId     | String     | The locationId on Instagram.
 
 ## Instagram.searchLocationsByArea
 Search for a location by geographic coordinate.
 
 | Field             | Type       | Description
 |-------------------|------------|----------
-| accessToken       | credentials| Required: Get information about a tag object.
+| accessToken       | credentials| Get information about a tag object.
 | coordinate               | Map     | Latitude and longitude coma separated of the center search coordinate.
 | distance          | String     | Default is 500m (distance=500), max distance is 750.
 
@@ -275,6 +275,6 @@ Search for a location by geographic facebook id.
 
 | Field             | Type       | Description
 |-------------------|------------|----------
-| accessToken       | credentials| Required: Get information about a tag object.
+| accessToken       | credentials| Get information about a tag object.
 | facebookpid| String     | Returns a location mapped off of a Facebook places id.
 | distance          | String     | Default is 500m (distance=500), max distance is 750.
