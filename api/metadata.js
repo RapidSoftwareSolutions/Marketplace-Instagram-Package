@@ -12,6 +12,9 @@ module.exports.do = function(req, res){
                 'accessToken'
             ]
         },
+        "steps":[
+          "Navigate to our OAuth Generator https://rapidoauth.com/instagram"
+        ],
         'blocks': [
           {
               "name":"getAccessToken",

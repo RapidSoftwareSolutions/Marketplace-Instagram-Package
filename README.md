@@ -276,5 +276,5 @@ Search for a location by geographic facebook id.
 | Field             | Type       | Description
 |-------------------|------------|----------
 | accessToken       | credentials| Required: Get information about a tag object.
-| facebook_places_id| String     | Returns a location mapped off of a Facebook places id.
+| facebookpid| String     | Returns a location mapped off of a Facebook places id.
 | distance          | String     | Default is 500m (distance=500), max distance is 750.
