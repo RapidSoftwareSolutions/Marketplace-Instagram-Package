@@ -63,7 +63,6 @@ Get the most recent media published by the owner of the access_token.
 | Field          | Type       | Description
 |----------------|------------|----------
 | accessToken    | credentials| Required: The access_token obtained from Instagram.
-| count          | Number     | Count of media to return.
 | minId          | String     | Return media later than this minId.
 | maxId          | String     | Return media earlier than this maxId.
 
@@ -74,7 +73,6 @@ Get the most recent media published by a user.
 |----------------|------------|----------
 | accessToken    | credentials| Required: The access_token obtained from Instagram.
 | userId         | String     | Required: The user id on Instagram.
-| count          | Number     | Count of media to return.
 | minId          | String     | Return media later than this minId.
 | maxId          | String     | Return media earlier than this maxId.
 
@@ -270,5 +268,13 @@ Search for a location by geographic coordinate.
 |-------------------|------------|----------
 | accessToken       | credentials| Required: Get information about a tag object.
 | coordinate               | Map     | Latitude and longitude coma separated of the center search coordinate.
-| facebook_places_id| String     | Returns a location mapped off of a Facebook places id. If used, lat and lng are not required.
+| distance          | String     | Default is 500m (distance=500), max distance is 750.
+
+## Instagram.searchLocationsByFacebookId
+Search for a location by geographic facebook id.
+
+| Field             | Type       | Description
+|-------------------|------------|----------
+| accessToken       | credentials| Required: Get information about a tag object.
+| facebook_places_id| String     | Returns a location mapped off of a Facebook places id.
 | distance          | String     | Default is 500m (distance=500), max distance is 750.

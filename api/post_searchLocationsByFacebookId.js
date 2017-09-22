@@ -1,10 +1,10 @@
 const       _ = require('../lib/functions');
 const request = require('../request');
 
-
+console.log('check');
 module.exports = (req, res) => {
 
-    let { accessToken, distance, lat, lng, coordinate, to="to" } = req.body.args;
+    let { accessToken, distance, facebookpid, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
@@ -12,19 +12,11 @@ module.exports = (req, res) => {
     };
 
     if(!accessToken) {
-        _.echoBadEnd(r, to, res, 'accessToken, lat, lng');
+        _.echoBadEnd(r, to, res, 'accessToken, facebookpid');
         return;
     }
 
-    if (typeof coordinate !== 'undefined'){
-     coordinate = coordinate.replace(/\s/g,'')
-     coord = coordinate.split(",");
-     lat = coord[0];
-     lng = coord[1];
-   }
-
     let uri = `https://api.instagram.com/v1/locations/search?access_token=${accessToken}`;
-    uri += `&lat=${lat}&lng=${lng}`;
 
     if(distance)    uri += `&distance=${distance}`;
     if(facebookpid) uri += `&facebook_places_id=${facebookpid}`;

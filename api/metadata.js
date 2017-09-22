@@ -12,10 +12,6 @@ module.exports.do = function(req, res){
                 'accessToken'
             ]
         },
-        'steps': [
-            "For testing the API, use our OAuth Generator (https://rapidoauth.com/instagram)",
-            "For production API usage, follow the steps on our Github docs(https://github.com/RapidSoftwareSolutions/Marketplace-Instagram-Package#how-to-get-credentials)"
-        ],
         'blocks': [
           {
               "name":"getAccessToken",
@@ -24,28 +20,28 @@ module.exports.do = function(req, res){
                   {
                       name: "clientId",
                       type: "credentials",
-                      info: "Required: The clientId obtained from Instagram.",
+                      info: "The clientId obtained from Instagram.",
                       required: true,
                       generator: "http://rapidoauth.com/instagram"
                   },
                   {
                       name: "clientSecret",
                       type: "credentials",
-                      info: "Required: The clientSecret obtained from Instagram.",
+                      info: "The clientSecret obtained from Instagram.",
                       required: true,
                       generator: "http://rapidoauth.com/instagram"
                   },
                   {
                       name: "redirectUri",
                       type: "String",
-                      info: "Required: The redirectUri set in your application",
+                      info: "The redirectUri set in your application",
                       required: true,
                       generator: "http://rapidoauth.com/instagram"
                   },
                   {
                       name: "code",
                       type: "String",
-                      info: "Required: The code received from the user",
+                      info: "The code received from the user",
                       required: true,
                       generator: "http://rapidoauth.com/instagram"
                   }
@@ -68,7 +64,7 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 }
@@ -91,14 +87,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "Required: The user id on Instagram.",
+                    info: "The user id on Instagram.",
                     required: true,
                 }
             ],
@@ -120,16 +116,11 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
-                {
-                    name: "count",
-                    type: "Number",
-                    info: "Count of media to return.",
-                    required: false,
-                },
+
                 {
                     name: "minId",
                     type: "String",
@@ -161,22 +152,17 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "Required: The user id on Instagram.",
+                    info: "The user id on Instagram.",
                     required: true,
                 },
-                {
-                    name: "count",
-                    type: "Number",
-                    info: "Count of media to return.",
-                    required: false,
-                },
+
                 {
                     name: "minId",
                     type: "String",
@@ -208,7 +194,7 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
@@ -237,14 +223,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "query",
                     type: "String",
-                    info: "Required: A query string.",
+                    info: "A query string.",
                     required: true
                 },
                 {
@@ -272,7 +258,7 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 }
@@ -295,7 +281,7 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 }
@@ -318,7 +304,7 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 }
@@ -348,7 +334,7 @@ module.exports.do = function(req, res){
                 {
                     name: "userId",
                     type: "String",
-                    info: "Required: The user id on Instagram.",
+                    info: "The user id on Instagram.",
                     required: true,
                 }
             ],
@@ -370,14 +356,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "Required: The user id on Instagram.",
+                    info: "The user id on Instagram.",
                     required: true,
                 }
             ],
@@ -399,14 +385,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "Required: The user id on Instagram.",
+                    info: "The user id on Instagram.",
                     required: true,
                 }
             ],
@@ -428,14 +414,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "Required: The user id on Instagram.",
+                    info: "The user id on Instagram.",
                     required: true,
                 }
             ],
@@ -457,14 +443,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "userId",
                     type: "String",
-                    info: "Required: The user id on Instagram.",
+                    info: "The user id on Instagram.",
                     required: true,
                 }
             ],
@@ -486,14 +472,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "Required: The media id on Instagram.",
+                    info: "The media id on Instagram.",
                     required: true,
                 }
             ],
@@ -522,7 +508,7 @@ module.exports.do = function(req, res){
                 {
                   name: "coordinate",
                   type: "Map",
-                  info: "Required: Latitude and longitude coma separated of the center search coordinate.",
+                  info: "Latitude and longitude coma separated of the center search coordinate.",
                   required: true,
                 },
 
@@ -551,14 +537,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "Required: The media id on Instagram.",
+                    info: "The media id on Instagram.",
                     required: true,
                 }
             ],
@@ -580,20 +566,20 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "Required: The media id on Instagram.",
+                    info: "The media id on Instagram.",
                     required: true,
                 },
                 {
                     name: "text",
                     type: "String",
-                    info: "Required: Text to post as a comment on the media object as specified in media-id.",
+                    info: "Text to post as a comment on the media object as specified in media-id.",
                     required: true,
                 }
             ],
@@ -615,20 +601,20 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "Required: The media id on Instagram.",
+                    info: "The media id on Instagram.",
                     required: true,
                 },
                 {
                     name: "commentId",
                     type: "String",
-                    info: "Required: The comment id on Instagram.",
+                    info: "The comment id on Instagram.",
                     required: true,
                 }
             ],
@@ -650,14 +636,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "Required: The media id on Instagram.",
+                    info: "The media id on Instagram.",
                     required: true,
                 },
             ],
@@ -679,14 +665,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "Required: The media id on Instagram.",
+                    info: "The media id on Instagram.",
                     required: true,
                 },
             ],
@@ -708,14 +694,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: The access_token obtained from Instagram.",
+                    info: "The access_token obtained from Instagram.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "mediaId",
                     type: "String",
-                    info: "Required: The media id on Instagram.",
+                    info: "The media id on Instagram.",
                     required: true,
                 },
             ],
@@ -737,14 +723,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: Get information about a tag object.",
+                    info: "Get information about a tag object.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "tagName",
                     type: "String",
-                    info: "Required: The tag name on Instagram.",
+                    info: "The tag name on Instagram.",
                     required: true,
                 },
             ],
@@ -766,14 +752,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: Get information about a tag object.",
+                    info: "Get information about a tag object.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "tagName",
                     type: "String",
-                    info: "Required: The tag name on Instagram.",
+                    info: "The tag name on Instagram.",
                     required: true,
                 },
             ],
@@ -795,14 +781,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: Get information about a tag object.",
+                    info: "Get information about a tag object.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "query",
                     type: "String",
-                    info: "Required: A valid tag name without a leading #. (eg. snowy, nofilter).",
+                    info: "A valid tag name without a leading #. (eg. snowy, nofilter).",
                     required: true,
                 },
             ],
@@ -824,14 +810,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: Get information about a tag object.",
+                    info: "Get information about a tag object.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "locationId",
                     type: "String",
-                    info: "Required: The location id on Instagram.",
+                    info: "The location id on Instagram.",
                     required: true,
                 },
             ],
@@ -853,14 +839,14 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: Get information about a tag object.",
+                    info: "Get information about a tag object.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "locationId",
                     type: "String",
-                    info: "Required: The locationId on Instagram.",
+                    info: "The locationId on Instagram.",
                     required: true,
                 },
             ],
@@ -882,22 +868,52 @@ module.exports.do = function(req, res){
                 {
                     name: "accessToken",
                     type: "credentials",
-                    info: "Required: Get information about a tag object.",
+                    info: "Get information about a tag object.",
                     required: true,
                     generator: "http://rapidoauth.com/instagram"
                 },
                 {
                     name: "coordinate",
                     type: "Map",
-                    info: "Required: Latitude and longitude coma separated of the center search coordinate.",
+                    info: "Latitude and longitude coma separated of the center search coordinate.",
                     required: true,
                 },
 
                 {
-                    name: "facebook_places_id",
+                    name: "distance",
+                    type: "String",
+                    info: "Default is 500m (distance=500), max distance is 750.",
+                    required: false,
+                },
+            ],
+            'callbacks':[
+                    {
+                    'name':'error',
+                    'info': 'Error'
+                },
+                {
+                    'name':'success',
+                    'info': 'Success'
+                }
+            ]
+        },
+        {
+            "name":"searchLocationsByFacebookId",
+            "description": "Search for a location by facebookId",
+            "args":[
+                {
+                    name: "accessToken",
+                    type: "credentials",
+                    info: "Get information about a tag object.",
+                    required: true,
+                    generator: "http://rapidoauth.com/instagram"
+                },
+
+                {
+                    name: "facebookpid",
                     type: "String",
                     info: "Returns a location mapped off of a Facebook places id. If used, lat and lng are not required.",
-                    required: false,
+                    required: true,
                 },
                 {
                     name: "distance",
@@ -916,6 +932,7 @@ module.exports.do = function(req, res){
                     'info': 'Success'
                 }
             ]
-        },]
+        },
+      ]
     })
 };
