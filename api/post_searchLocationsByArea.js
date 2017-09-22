@@ -4,7 +4,7 @@ const request = require('../request');
 
 module.exports = (req, res) => {
 
-    let { accessToken, distance, lat, lng, coordinate, to="to" } = req.body.args;
+    let { accessToken, distance, lat, lng, facebookpid, coordinate, to="to" } = req.body.args;
 
     let r = {
         callback        : "",
