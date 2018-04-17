@@ -76,78 +76,8 @@ Get the most recent media published by a user.
 | minId          | String     | Return media later than this minId.
 | maxId          | String     | Return media earlier than this maxId.
 
-## Instagram.getCurrentUsersLikedMedia
-Get the list of recent media liked by the owner of the access_token.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| maxLikeId      | String     | Return media liked before this id.
-
-## Instagram.searchUser
-Get the list of recent media liked by the owner of the access_token.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| query          | String     | A query string.
-| count          | String     | Number of users to return.
-
-## Instagram.getUsersFollows
-Get the list of users this user follows.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-
-## Instagram.getUsersFollowers
-Get the list of users this user is followed by.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-
-## Instagram.getUsersRequestedBy
-List the users who have requested this user's permission to follow.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-
-## Instagram.getRelationshipToUser
-Get information about a relationship to another user. Relationships are expressed using the following terms in the response:
-
-| Field      | Type       | Description
-|------------|------------|----------
-| accessToken| credentials| The access_token obtained from Instagram.
-| userId     | String     | The user id on Instagram.
-
-## Instagram.followUser
-Follow a user.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| userId         | String     | The user id on Instagram.
-
-## Instagram.unfollowUser
-Unfollow a user.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| userId         | String     | The user id on Instagram.
-
 ## Instagram.approveUserRequest
 Approve a follow request by a user.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| userId         | String     | The user id on Instagram.
-
-## Instagram.ignoreUserRequest
-Ignore a follow request by a user.
 
 | Field          | Type       | Description
 |----------------|------------|----------
@@ -173,48 +103,6 @@ Search for recent media in a given area.
 
 ## Instagram.getCommentsForMedia
 Get a list of recent comments on a media object.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| mediaId        | String     | The media id on Instagram.
-
-## Instagram.addCommentToMedia
-Create a comment on a media object.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| mediaId        | String     | The media id on Instagram.
-| text           | String     | Text to post as a comment on the media object as specified in media-id.
-
-## Instagram.removeCommentFromMedia
-Remove a comment either on the authenticated user's media object or authored by the authenticated user.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| mediaId        | String     | The media id on Instagram.
-| commentId      | String     | The comment id on Instagram.
-
-## Instagram.getLikesForMedia
-Get a list of users who have liked this media.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| mediaId        | String     | The media id on Instagram.
-
-## Instagram.addLikeToMedia
-Create a comment on a media object.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| mediaId        | String     | The media id on Instagram.
-
-## Instagram.removeLikeFromMedia
-Remove a comment on a media object.
 
 | Field          | Type       | Description
 |----------------|------------|----------
