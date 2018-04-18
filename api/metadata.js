@@ -113,7 +113,7 @@ module.exports.do = function(req, res){
             ]
         },
         {
-            "name":"getCurrentUsersRecentMedia", 
+            "name":"getCurrentUsersRecentMedia",
             "description": "Get the most recent media published by the owner of the access_token.",
             "args":[
                 {
@@ -177,35 +177,6 @@ module.exports.do = function(req, res){
                     type: "String",
                     info: "Return media earlier than this maxId.",
                     required: false,
-                }
-            ],
-            'callbacks':[
-                    {
-                    'name':'error',
-                    'info': 'Error'
-                },
-                {
-                    'name':'success',
-                    'info': 'Success'
-                }
-            ]
-        },
-        {
-            "name":"approveUserRequest",
-            "description": "Approve a follow request by a user.",
-            "args":[
-                {
-                    name: "accessToken",
-                    type: "credentials",
-                    info: "The access_token obtained from Instagram.",
-                    required: true,
-                    generator: "http://rapidoauth.com/instagram"
-                },
-                {
-                    name: "userId",
-                    type: "String",
-                    info: "The user id on Instagram.",
-                    required: true,
                 }
             ],
             'callbacks':[

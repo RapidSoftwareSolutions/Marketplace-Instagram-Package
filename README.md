@@ -76,14 +76,6 @@ Get the most recent media published by a user.
 | minId          | String     | Return media later than this minId.
 | maxId          | String     | Return media earlier than this maxId.
 
-## Instagram.approveUserRequest
-Approve a follow request by a user.
-
-| Field          | Type       | Description
-|----------------|------------|----------
-| accessToken    | credentials| The access_token obtained from Instagram.
-| userId         | String     | The user id on Instagram.
-
 ## Instagram.getMediaInformation
 Get information about a media object. Use the type field to differentiate between image and video media in the response. You will also receive the user_has_liked field which tells you whether the owner of the access_token has liked this media.
 
